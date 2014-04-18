@@ -1,0 +1,101 @@
+.select
+	position: relative
+	&.is-active
+		.select__text
+			background: #fff 
+			border-color: $border
+		.select__list
+			+opacity(1)
+			visibility: visible
+			a,span
+				padding-top: 6px
+				padding-bottom: 6px
+.select__text
+	position: relative
+	height: 30px
+	line-height: 30px
+	cursor: pointer
+	+unselectable  
+	padding: 0 25px   
+	border: 1px solid transparent
+	border-bottom: 0
+	color: $blue 
+	background: none 
+	+tr(all .2s linear)
+	+border-radius(8px 8px 0 0)
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		right: 10px
+		margin-top: -2px
+		+s(select) 
+	.icon
+		position: relative
+		top: -1px
+.select__list
+	position: absolute
+	+opacity(0)
+	visibility: hidden
+	top: 100%
+	left: 0
+	z-index: 1000
+	min-width: 100%
+	padding: 0 0 8px 
+	background: #fff 
+	border: 1px solid $border
+	border-top: 0
+	+box
+	+tr(all .2s linear)
+	+border-radius(0 0 8px 8px)
+	+scrollbar
+		width: 4px
+		overflow: hidden
+		background: #e3e3e3 
+		border-radius: 2px
+	+scrollbar-thumb
+		border-radius: 2px
+		background: $blue_dark
+	+scrollbar-track-piece 
+		width: 4px 
+		border-radius: 2px
+	a, span
+		display: block
+		padding: 0 25px 
+		//overflow: hidden
+		white-space: nowrap
+		//text-overflow: ellipsis 
+		+box
+		color: $blue_dark
+		cursor: pointer
+		+tr(all .2s linear)
+		&:hover
+			color: #fff
+			background: #80bdee  
+	&.has-scroll
+		overflow-y: auto
+		max-height: 320px
+		overflow-x: hidden
+ 
+.select_city
+	.select__text
+		&:before
+			content: ""
+			position: absolute
+			left: 9px
+			top: 5px
+			+s(point) 
+.select_currency,
+.select_lang
+	min-width: 80px
+	.select__text
+		padding: 0 10px 
+	.select__list
+		a,span
+			padding: 0 10px
+.select_lang
+	.select__text
+		.icon
+			margin-right: 5px
+	.icon
+		margin-right: 7px
