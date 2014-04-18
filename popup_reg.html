@@ -1,0 +1,223 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+
+<div class="l-layout">
+	<header class="header">
+		<div class="header__top">
+			<div class="header__left">
+				<a class="header__user" href="#">Дмитрий, ваши заказы</a>
+				<a href="#">Выход</a>
+				<div class="header__tel">(070) 277-44-55</div>
+				<a href="#">On-line поддержка</a>
+			</div>
+			<div class="header__right">
+				<div class="header__select">
+					<span>Доставка в</span>
+					<div class="select select_city js-select">
+						<div class="select__text">
+							<span class="js-select-text">Азербайджан</span>
+						</div>
+						<ul class="select__list js-select-list">
+							<li><a href="#">Армения</a></li>
+							<li><a href="#">Беларусь</a></li>
+							<li><a href="#">Грузия</a></li>
+							<li><a href="#">Казахстан</a></li>
+							<li><a href="#">Латвия</a></li>
+							<li><a href="#">Литва</a></li>
+							<li><a href="#">Молдова</a></li>
+							<li><a href="#">Россия</a></li>
+							<li><a href="#">Турция</a></li>
+							<li><a href="#">Узбекистан</a></li>
+							<li><a href="#">Украина</a></li>
+							<li><a href="#">Эстония</a></li>
+							<li><span class="js-more-list">Еще...</span></li>
+							<li hidden><a href="#">Армения</a></li>
+							<li hidden><a href="#">Беларусь</a></li>
+							<li hidden><a href="#">Грузия</a></li>
+							<li hidden><a href="#">Казахстан</a></li>
+							<li hidden><a href="#">Латвия</a></li>
+							<li hidden><a href="#">Литва</a></li>
+							<li hidden><a href="#">Молдова</a></li>
+							<li hidden><a href="#">Россия</a></li>
+							<li hidden><a href="#">Турция</a></li>
+							<li hidden><a href="#">Узбекистан</a></li>
+							<li hidden><a href="#">Украина</a></li>
+							<li hidden><a href="#">Эстония</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__select">
+					<span>Валюта</span>
+					<div class="select select_currency js-select">
+						<div class="select__text">
+							<span class="js-select-text"><i class="icon icon-azn"></i> - AZN</span>
+						</div>
+						<ul class="select__list js-select-list">
+							<li>
+								<a href="#"><i class="icon icon-azn"></i> - AZN</a>
+							</li>
+							<li><a href="#">$ - USD</a></li>
+							<li><a href="#">R - RUR</a></li>
+							<li><a href="#">₴ - UAH</a></li>
+							<li><a href="#">€ - EUR</a></li>
+							<li><a href="#">T - TEN</a></li>
+							<li><a href="#">L - LEI</a></li>
+							<li><span class="js-more-list">Еще...</span></li>
+							<li hidden><a href="#">$ - USD</a></li>
+							<li hidden><a href="#">R - RUR</a></li>
+							<li hidden><a href="#">₴ - UAH</a></li>
+							<li hidden><a href="#">€ - EUR</a></li>
+							<li hidden><a href="#">T - TEN</a></li>
+							<li hidden><a href="#">L - LEI</a></li>
+							<li hidden><a href="#">L - LEI</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__select">
+					<span>Язык</span>
+					<div class="select select_lang js-select">
+						<div class="select__text">
+							<span class="js-select-text">
+							<i class="icon icon-ru"></i> RU</span>
+						</div>
+						<ul class="select__list js-select-list">
+							<li>
+								<a href="#"><i class="icon icon-en"></i>EN</a>
+							</li>
+							<li>
+								<a href="#"><i class="icon icon-az"></i>AZ</a>
+							</li>
+							<li>
+								<a href="#"><i class="icon icon-ua"></i>UA</a>
+							</li>
+							<li>
+								<a href="#"><i class="icon icon-de"></i>DE</a>
+							</li>
+							<li>
+								<a href="#"><i class="icon icon-kaz"></i>KZ</a>
+							</li>
+							<li>
+								<a href="#"><i class="icon icon-mol"></i>MD</a>
+							</li>
+							<li><span class="js-more-list">Еще...</span></li>
+							<li hidden>
+								<a href="#"><i class="icon icon-en"></i>EN</a>
+							</li>
+							<li hidden>
+								<a href="#"><i class="icon icon-az"></i>AZ</a>
+							</li>
+							<li hidden>
+								<a href="#"><i class="icon icon-ua"></i>UA</a>
+							</li>
+							<li hidden>
+								<a href="#"><i class="icon icon-de"></i>DE</a>
+							</li>
+							<li hidden>
+								<a href="#"><i class="icon icon-kaz"></i>KZ</a>
+							</li>
+							<li hidden>
+								<a href="#"><i class="icon icon-mol"></i>MD</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__main">
+			<a href="#" class="header__logo"></a>		
+		</div>
+	</header>
+	<div class="popup popup_reg js-popup" style="display:block">
+		<div class="popup__title">Регистрация нового пользователя</div>
+		<form  method="get" action="" class="js-reg-form">
+			<div class="input-row">
+				<label for="firstname" class="input-wrap">
+					<input type="text" class="input input_popup" id="firstname" name="firstname" required>
+					<span class="input-wrap__text">Ваше имя</span>
+				</label>
+			</div>
+			<div class="input-row">
+				<label for="lastname" class="input-wrap">
+					<input type="text" class="input input_popup" id="lastname" name="lastname" required>
+					<span class="input-wrap__text">Ваша фамилия</span>
+				</label>
+			</div>
+			<div class="input-row">
+				<label for="email" class="input-wrap">
+					<input type="email" class="input input_popup" id="email" name="email" required>
+					<span class="input-wrap__text">Ваш e-mail</span>
+				</label>
+			</div>
+			<div class="input-row">
+				<label for="password" class="input-wrap">
+					<input type="password" class="input input_popup" id="password" name="password" required>
+					<span class="input-wrap__text">Пароль для входа</span>
+				</label>
+			</div>
+			<div class="input-row">
+				<label for="confirm_password" class="input-wrap">
+					<input type="password" class="input input_popup" id="confirm_password" name="confirm_password" required>
+					<span class="input-wrap__text">Пароль еще раз</span>
+				</label>
+			</div>
+			<div class="input-row">
+				<label for="tel" class="input-wrap">
+					<input type="tel" class="input input_popup" id="tel" name="tel" required>
+					<span class="input-wrap__text">Телефон</span>
+				</label>
+			</div>
+			<div class="popup__submit">
+				<div>Заполните пожалуйста все поля, это поможет нам быстрее с вами связаться и доставить ваш заказ. </div>
+				<input type="submit" class="btn" value="РЕГИСТРАЦИЯ">
+			</div>
+		</form>
+		<button class="btn-close js-close"></button>
+	</div>
+	<div class="push"></div>
+
+	
+</div>
+<footer class="footer">
+	<a href="#" class="footer__logo"></a>
+	<div class="footer__nav">
+		<ul>
+			<li><a href="#">Computex.ws</a></li>
+			<li><a href="#">Работа у нас</a></li>
+			<li><a href="#">Регионы</a></li>
+			<li><a href="#">Пресса о нас </a></li>
+			<li><a href="#">Наши партнеры</a></li>
+			<li><a href="#">Реклама</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">Ремонт смартфонов</a></li>
+			<li><a href="#">Trade in</a></li>
+			<li><a href="#">Обновления</a></li>
+			<li><a href="#">Постоянным клиентам </a></li>
+			<li><a href="#">Интересные предложения</a></li>
+			<li><a href="#">Акции</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">Как купить онлайн</a></li>
+			<li><a href="#">Связаться с нами</a></li>
+			<li><a href="#">Где моя покупка?</a></li>
+			<li><a href="#">Информация по доставке</a></li>
+			<li><a href="#">Возврат и гарантия</a></li>
+			<li><a href="#">F.A.Q.</a></li>
+		</ul>
+	</div>
+</footer>
+<div class="overlay js-overlay" style="display:block"></div>
+</body>
+</html>

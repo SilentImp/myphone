@@ -1,8 +1,11 @@
 $(document).ready(function() {
 	$(document).click(function() {
-        //$(".js-select-list").hide();
+        popup.fadeOut(200);
+       	overlay.fadeOut(200);
         $(".js-select").removeClass("is-active");
     });
+    var overlay = $(".js-overlay");
+    var popup = $(".js-popup");
     function selectList() {
         var select = $(".js-select");
         var select_list = $(".js-select-list");
@@ -40,4 +43,64 @@ $(document).ready(function() {
         event.stopPropagation();
     });
 
+   	popup.on("click", function(event){
+        event.stopPropagation();
+    });
+
+    $(".js-close").on("click", function(event){
+    	$(this).parent().fadeOut(200);
+    	overlay.fadeOut(200);
+        event.stopPropagation();
+    });
+     $(".js-reg-form").each(function(){
+ 		$(this).validate({
+			rules: {
+				firstname: "required",
+				lastname: "required",
+				username: {
+					required: true,
+					minlength: 2
+				},
+				password: {
+					required: true,
+					minlength: 5
+				},
+				confirm_password: {
+					required: true,
+					minlength: 5,
+					equalTo: "#password"
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				tel: {
+					required: true,
+					minlength: 2
+				},
+				//agree: "required"
+			},
+			messages: {
+				firstname: "Вас так зовут?",
+				lastname: "У вас такая фамилия?",
+				// username: {
+				// 	required: "Please enter a username",
+				// 	minlength: "Your username must consist of at least 2 characters"
+				// },
+				password: {
+					required: "Пароли не совпадают",
+					minlength: "Your password must be at least 5 characters long"
+				},
+				confirm_password: {
+					required: "Пароли не совпадают",
+					minlength: "Your password must be at least 5 characters long",
+					equalTo: "Please enter the same password as above"
+				},
+				email: "Тут что-то не так :(",
+				tel: "Телефон с ошибкой :(",
+				//agree: "Please accept our policy"
+			}
+		});
+     });
+	   
 });
