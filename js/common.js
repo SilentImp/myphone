@@ -195,4 +195,9 @@ $(document).ready(function() {
 		return false;
         event.stopPropagation();
     });
+    $(".js-del-item").on("click", function(event){
+    	$(this).parents(".item").remove();
+		return false;
+        event.stopPropagation();
+    });
 });

@@ -25,14 +25,19 @@
 			.item
 				float: right
 				margin: 0 0 0 20px 
+	.item__del
+		position: absolute
+		top: 0
+		right: 0
 .item__name,
 .item__brand
 	a
 		color: #575050     
 .item__img
 	display: block
+	margin: 14px auto 10px 
+	width: 100px
 	position: relative
-	margin: 14px 0 10px 
 	text-align: center
 	height: 208px
 	&:hover
@@ -77,6 +82,8 @@
 		width: 100px
 		height: auto
 		+box-shadow(none)
+	.colors-wrap
+		padding-left: 0
 	.item__name,
 	.item__brand
 		a
@@ -100,3 +107,10 @@
 		display: inline-block
 		vertical-align: middle
 		+s(link)
+
+.basket-item
+	margin-bottom: 17px
+	.color, 
+	div
+		display: inline-block
+		vertical-align: top
