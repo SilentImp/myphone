@@ -195,6 +195,10 @@ a:hover { color: #2e86cd; }
 .btn-clear { position: absolute; background: url('../img/icons-s1d60647320.png') 0 -539px no-repeat; width: 16px; height: 16px; }
 .btn-clear:hover { background-position: 0 -659px; }
 
+.key { display: inline-block; margin: 0 16px 16px 0; padding: 0 2px; width: 112px; height: 32px; line-height: 28px; border: 2px solid #7fbded; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; background: white; text-align: center; font-size: 12px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: "helveticaltstd-roman", Arial, sans-serif; text-transform: none; }
+.key.is-active { background: #7fbded; color: white; }
+.key.is-inactive { cursor: default; color: #768896; border: 1px solid #8c9aa6; }
+
 .icon { display: inline-block; vertical-align: middle; }
 
 .icon-azn { background: url('../img/icons-s1d60647320.png') 0 -565px no-repeat; width: 10px; height: 8px; }
@@ -230,11 +234,7 @@ a:hover { color: #2e86cd; }
 
 .filter__opt { font-size: 0; margin-right: -20px; }
 
-.filter__opt_color .filter__val { width: 48px; }
-
-.filter__val { display: inline-block; margin: 0 16px 16px 0; padding: 0 2px; width: 112px; height: 32px; line-height: 28px; border: 2px solid #7fbded; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; background: white; text-align: center; font-size: 12px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: "helveticaltstd-roman", Arial, sans-serif; text-transform: none; }
-.filter__val.is-active { background: #7fbded; color: white; }
-.filter__val.is-inactive { cursor: default; color: #768896; border: 1px solid #8c9aa6; }
+.filter__opt_color .key { width: 48px; }
 
 .items-wrap { margin-bottom: 70px; *zoom: 1; }
 .items-wrap:after { content: " "; display: table; clear: both; }
