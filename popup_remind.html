@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Popup reg</title>
+	<title>popup remind</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -140,47 +140,20 @@
 		</div>
 	</header>
 	<div class="popup js-popup" style="display:block">
-		<div class="popup__title">Регистрация нового пользователя</div>
+		<div class="popup__title">Авторизация</div>
 		<form  method="post" action="" class="js-validate-form">
-			<div class="input-row">
-				<label for="firstname" class="input-wrap">
-					<input type="text" class="input input_popup" id="firstname" name="firstname" required>
-					<span class="input-wrap__text">Ваше имя</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="lastname" class="input-wrap">
-					<input type="text" class="input input_popup" id="lastname" name="lastname" required>
-					<span class="input-wrap__text">Ваша фамилия</span>
-				</label>
-			</div>
 			<div class="input-row">
 				<label for="email" class="input-wrap">
 					<input type="email" class="input input_popup" id="email" name="email" required>
 					<span class="input-wrap__text">Ваш e-mail</span>
 				</label>
 			</div>
-			<div class="input-row">
-				<label for="password" class="input-wrap">
-					<input type="password" class="input input_popup" id="password" name="password" required>
-					<span class="input-wrap__text">Пароль для входа</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="confirm_password" class="input-wrap">
-					<input type="password" class="input input_popup" id="confirm_password" name="confirm_password" required>
-					<span class="input-wrap__text">Пароль еще раз</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="tel" class="input-wrap">
-					<input type="tel" class="input input_popup" id="tel" name="tel" required>
-					<span class="input-wrap__text">Телефон</span>
-				</label>
-			</div>
 			<div class="input-row input-row_btn">
-				<div class="input-row__info">Заполните пожалуйста все поля, это поможет нам быстрее с вами связаться и доставить ваш заказ. </div>
-				<input type="submit" class="btn" value="РЕГИСТРАЦИЯ">
+				<div class="input-row__info">
+					<p>Введите. подалуйста, e-mail и пароль которые вы указывали при регистрации на этом сайте </p>
+					<a href="#">Забыли пароль?</a>
+				</div>
+				<input type="submit" class="btn" value="НАПОМНИТЬ">
 			</div>
 		</form>
 		<button class="btn-close js-close"></button>

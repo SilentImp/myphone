@@ -52,8 +52,9 @@ $(document).ready(function() {
     	overlay.fadeOut(200);
         event.stopPropagation();
     });
-     $(".js-reg-form").each(function(){
- 		$(this).validate({
+	$(".js-validate-form").each(function(){
+			$(this).validate({
+				errorClass: "has-error",
 			rules: {
 				firstname: "required",
 				lastname: "required",
@@ -89,18 +90,46 @@ $(document).ready(function() {
 				// },
 				password: {
 					required: "Пароли не совпадают",
-					minlength: "Your password must be at least 5 characters long"
+					minlength: "Минимум 5 символов",
 				},
 				confirm_password: {
 					required: "Пароли не совпадают",
-					minlength: "Your password must be at least 5 characters long",
+					minlength: "Минимум 5 символов",
 					equalTo: "Please enter the same password as above"
 				},
 				email: "Тут что-то не так :(",
-				tel: "Телефон с ошибкой :(",
+				//tel: "Телефон с ошибкой :(",
+				tel: {
+					required: "Телефон с ошибкой :(",
+					digits: true,
+					//minlength: "Your password must be at least 5 characters long",
+					//equalTo: "Please enter the same password as above"
+				},
 				//agree: "Please accept our policy"
 			}
 		});
-     });
+	});
+	$(".js-enter-form").each(function(){
+		$(this).validate({
+			errorClass: "has-error",
+			rules: {
+				password: {
+					required: true,
+					minlength: 5
+				},
+				email: {
+					required: true,
+					email: true
+				},
+			},
+			messages: {
+				password: {
+					required: "Неверный пароль :(",
+					minlength: "Минимум 5 символов",
+				},
+				email: "Тут что-то не так :(",
+			}
+		});
+	});
 	   
 });

@@ -102,6 +102,34 @@
 	
 .input-row
 	margin-bottom: 6px		
+	label.has-error
+		display: inline-block
+		margin-left: 3px
+		vertical-align: middle
+		font-size: 12px
+		color: $red
+		+ .input-wrap__text
+			display: none
+	.input
+		margin-right: 12px  
+.input-row_btn
+	margin-top: 19px  
+	+clr
+	.btn
+		float: left   
+.input-row__info
+	float: left
+	margin-right: 16px
+	width: 160px
+	font-size: 10px
+	color: #4c4f5a 
+	line-height: 1
+	letter-spacing: -.5px 
+	a
+		display: inline-block
+		margin-top: 10px
+		letter-spacing: 0
+		font-size: 12px 
 .input
 	display: inline-block
 	vertical-align: middle
@@ -111,16 +139,23 @@
 	font-size: 12px
 	color: #000 
 	border: 1px solid #bebebe
-	+border-radius(4px)
+	+border-radius(4px)  
 	//+tr(all .2s linear)
 	&:focus
 		border-color: #80bdee
 		+box-shadow(inset 0 0 0 1px #80bdee)
+	&.has-error
+		border-color: #ed808a
+		background: #fce7ec
+		&:focus
+			order-color: #ed808a
+			background: #fce7ec
+			+box-shadow(none)
+
 .input_popup
 	width: 161px
 .input-wrap__text
 	display: inline-block
-	margin-left: 12px
 	vertical-align: middle
 	font-size: 12px
 	color: $gray 
@@ -136,4 +171,7 @@
 .btn-close
 	position: absolute
 	+s(close)
-
+	&:hover
+		+sp(close-h)
+	&:active  
+		+sp(close-act)
