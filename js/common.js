@@ -3,6 +3,8 @@ $(document).ready(function() {
         popup.fadeOut(200);
        	overlay.fadeOut(200);
         $(".js-select").removeClass("is-active");
+        $(".item").removeClass("is-active");
+        $(".js-open-filter").removeClass("is-active");
     });
     var overlay = $(".js-overlay");
     var popup = $(".js-popup");
@@ -132,4 +134,65 @@ $(document).ready(function() {
 		});
 	});
 	   
+	$(".js-item-popup").on("click", function(event){
+		popup.fadeOut(200);
+		overlay.fadeIn(200);
+    	$(this).parents(".item").addClass("is-active").find(".js-popup").fadeIn(200);
+    	return false;
+        event.stopPropagation();
+    });
+
+    function accordion() {
+       //$(".js-accordion-list").hide();
+       $(".js-accordion-title").addClass("is-active");
+       $(".js-hidden-list .js-accordion-list").hide();
+       $(".js-hidden-list .js-accordion-title").removeClass("is-active");
+        $(".js-accordion-title").click(function(){
+            if ($(this).parent().hasClass("js-one-active")) {
+                $(".js-accordion-title").removeClass("is-active");
+                $(".js-accordion-list").slideUp("fast");
+                $(this).toggleClass("is-active");
+                $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
+            }
+            else {
+                $(this).toggleClass("is-active");
+                $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
+            }
+            
+        });
+        $(".js-show-all-accordion").on("click",function(){
+            if ($(this).hasClass("is-active")) {
+                $(".js-show-all-accordion").removeClass("is-active");
+                $(".js-accordion-list").slideUp("fast");
+                $(".js-show-all-accordion").text("ПОКАЗАТЬ ВСЕ ПУНКТЫ");
+            }
+            else {
+                $(".js-show-all-accordion").addClass("is-active");
+                $(".js-accordion-list").slideDown("fast");
+                $(".js-show-all-accordion").text("скрыть все списки");
+            }
+            return false;
+        });
+    }
+    accordion();
+
+
+    $(".js-filter-key").on("click", function(event){
+    	if ($(this).hasClass("is-inactive")) {
+    	}
+    	else {
+    		$(this).toggleClass("is-active");
+    		$(this).children().toggleClass("is-active");
+    	}
+		
+		return false;
+        event.stopPropagation();
+    });
+    $(".js-open-filter").on("click", function(event){
+    	$(this).toggleClass("is-active");
+    	$(this).next().toggleClass("is-active");
+    	$(".js-filter").fadeIn(200);
+		return false;
+        event.stopPropagation();
+    });
 });

@@ -3,6 +3,12 @@ $blue_dark: #2e86cd
 $border: #d6e2ec
 $gray: #768896
 $red: #db616c
++font(helveticaltstd-roman, helveticaltstd-roman)
++font(helveticaltstd-bold, helveticaltstd-bold)
+=roman
+	font-family: "helveticaltstd-roman", Arial, sans-serif 
+=bold
+	font-family: "helveticaltstd-bold", Arial, sans-serif 
 body
 	font-size: 12px 
 	font-family: Arial, sans-serif 
@@ -45,7 +51,8 @@ a
 	margin: 0 auto
 	padding: 0 16px 
 	width: 1008px 
-
+.header
+	margin-bottom: 29px
 .header__top
 	margin-bottom: 30px
 	padding: 10px 0 4px
@@ -89,13 +96,18 @@ a
 		vertical-align: middle
 
 .header__main
+	position: relative
 	+clr
 	.header__right
 		a
 			display: inline-block
+			margin-left: 35px
 			vertical-align: middle
 			font-size: 16px
+			+roman
 			text-transform: uppercase
+		.header__filter
+			margin-left: 5px
 .header__logo    
 	display: inline-block
 	vertical-align: middle
@@ -159,18 +171,22 @@ a
 		left: 8px
 		top: 10px
 		+s(filter)  
-	&:hover  
+	&:hover 
 		border: 2px solid #80bdee
 		&:before
 			+sp(filter-h)  
 			left: 6px
 			top: 8px
-	&:active
+	&.is-active 
 		background: #80bdee
+		&:hover
+			&:before
+				left: 7px
+				top: 8px   
 		&:before
-			left: 7px
-			top: 9px
-			+sp(filter-act)  				
+			left: 9px
+			top: 10px  
+			+sp(filter-act) 				
 
 .footer
 	position: relative    
@@ -192,3 +208,4 @@ a
 		line-height: 1.33
 		&:last-child
 			width: 160px
+			

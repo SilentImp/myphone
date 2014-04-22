@@ -1,0 +1,102 @@
+.items-wrap
+	margin-bottom: 70px
+	+clr
+.item
+	float: left
+	position: relative
+	margin: 0 16px 16px 0
+	padding: 22px 0 12px 
+	width: 128px
+	height: 344px
+	+box
+	+border-radius(8px)
+	background: #fff
+	font-size: 12px
+	+roman
+	color: #575050 
+	+box-shadow(0 1px 0 rgba(0,0,0,.13))
+	text-align: center
+	&.is-active
+		z-index: 20000
+	&:nth-child(7n)
+		.item__popup
+			left: auto
+			right: 0
+			.item
+				float: right
+				margin: 0 0 0 20px 
+.item__name,
+.item__brand
+	a
+		color: #575050     
+.item__img
+	display: block
+	position: relative
+	margin: 14px 0 10px 
+	text-align: center
+	height: 208px
+	&:hover
+		text-decoration: none
+		span
+			+opacity(1)
+			visibility: visible
+	img
+		display: inline-block
+		vertical-align: middle
+		max-width: 100%
+		max-height: 100%
+		height: auto
+	span
+		position: absolute
+		visibility: hidden
+		top: 50%
+		left: 50%  
+		margin: -40px 0 0 -40px
+		width: 80px
+		height: 80px
+		font: normal 12px Arial,sans-serif
+		+border-radius(8px)
+		background: #000 
+		+opacity(0)
+		color: #fff 
+		font-size: 9px
+		+tr(all .2s linear)
+		background: rgba(#000, .6)
+	i
+		display: block
+		margin: 16px auto 8px 
+		+s(view)
+.item__popup
+	left: 0
+	top: 0
+	padding: 0 14px 24px
+	width: 297px
+	.item
+		margin: 0 20px 0 0
+		padding-bottom: 4px  
+		width: 100px
+		height: auto
+		+box-shadow(none)
+	.item__name,
+	.item__brand
+		a
+			color: #000 
+	.item-info
+		margin-top: 62px
+.item-info
+	overflow: hidden
+	text-align: left
+	line-height: 1.33
+	ul
+		margin-bottom: 13px
+.hyperlink
+	display: inline-block
+	clear: both
+	+roman
+	font-size: 12px
+	i
+		position: relative
+		top: -1px
+		display: inline-block
+		vertical-align: middle
+		+s(link)

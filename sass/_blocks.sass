@@ -175,3 +175,122 @@
 		+sp(close-h)
 	&:active  
 		+sp(close-act)
+
+.colors-wrap
+	margin-bottom: 10px
+	font-size: 0	
+	.color
+		&:first-child
+			margin-left: 0
+.color
+	display: inline-block
+	vertical-align: middle
+	margin: 0 4px
+	width: 12px
+	height: 12px
+	+box
+	border-width: 2px
+	border-style: solid 
+	background: #fff 
+	+border-radius(50%)
+	
+	&.is-white
+		border: 2px solid #e4e4e4
+	&.is-black
+		border-color: #000
+		&:hover
+			background: #000
+	&.is-red
+		border-color: #e03a3a
+		&:hover
+			background: #e03a3a
+	&.is-yellow
+		border-color: #fab32b
+		&:hover
+			background: #fab32b
+	&.is-blue
+		border-color: #56b7fb
+		&:hover
+			background: #56b7fb
+	&.is-green
+		border-color: #3fb624
+		&:hover
+			background: #3fb624
+	&.is-active
+		position: relative
+		&.is-white
+			background: #fff 
+		&.is-black
+			background: #000
+		&.is-red
+			background: #e03a3a
+		&.is-yellow
+			background: #fab32b
+		&.is-blue
+			background: #56b7fb
+		&.is-green
+			background: #3fb624 
+			
+.price
+	position: relative
+	display: inline-block
+	padding: 0 12px 0 28px
+	height: 20px
+	border: 2px solid 
+	line-height: 20px
+	+roman
+	color: #000
+	font-size: 12px
+	text-transform: uppercase
+	border: 2px solid #7fbded
+	+border-radius(14px)
+	+tr(none)
+	em
+		display: none
+	&:before
+		content: ""
+		position: absolute
+		top: 4px
+		left: 7px
+		+s(price)
+	&:hover
+		background: #80bdee 
+		color: #fff 
+		&:before
+			+sp(price-h)  
+	&:active
+		background: #7cb6e5 
+	&.is-active
+		padding-left: 5px
+		background: #80bdee 
+		color: #fff 
+		&:before
+			display: none
+		em
+			display: inline-block
+			margin-right: 8px
+			width: 16px
+			height: 16px
+			+border-radius(50%)
+			background: #fff
+			text-align: center
+			line-height: 16px
+			color: #000 
+			font-style: normal
+.var
+	margin-bottom: 4px
+	span,
+	.price
+		display: inline-block
+		vertical-align: middle
+	span
+		margin-right: 6px
+		font-size: 12px
+		+roman
+		color: #000 
+		
+.btn-clear
+	position: absolute
+	+s(clear)
+	&:hover
+		+sp(clear-h)

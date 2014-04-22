@@ -6,9 +6,12 @@
 	left: 0
 	bottom: 0
 	z-index: 10000
-	background: rgba(#000, .1)
+	background: #000
+	+opacity(.1)
+	//background: rgba(#000, .1) 
 .popup
 	position: absolute
+	display: none
 	top: 45px
 	left: 16px
 	padding: 17px
@@ -27,6 +30,70 @@
 .popup__title
 	margin-bottom: 12px
 	font-size: 16px
-	font-weight: bold
+	font-weight: normal
+	+bold 
 	color: #575050 
   
+.filter
+	position: absolute
+	display: none
+	right: 0
+	top: 73px
+	padding: 14px 
+	z-index: 20000
+	width: 272px
+	+box
+	border: 2px solid #7fbded
+	+border-radius(8px)
+	background: #fff
+	.btn-close
+		top: -6px
+		right: -6px
+.filter__title
+	position: relative 
+	margin-bottom: 12px
+	padding-right: 30px
+	overflow: hidden
+	font-size: 16px
+	cursor: pointer
+	+roman
+	color: #458fd0
+	.btn-clear
+		right: 0
+		top: 0
+		display: none
+	&.is-active
+		color: #000 
+		.btn-clear
+			display: block
+.filter__opt
+	font-size: 0
+	margin-right: -20px
+.filter__opt_color
+	.filter__val
+		width: 48px
+.filter__val
+	display: inline-block
+	margin: 0 16px 16px 0 
+	padding: 0 2px 
+	width: 112px
+	height: 32px
+	line-height: 28px
+	border: 2px solid #7fbded
+	+border-radius(4px)
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+	background: #fff
+	text-align: center
+	font-size: 12px
+	+box
+	+roman
+	text-transform: none
+	&.is-active
+		background: #7fbded 
+		color: #fff  
+	&.is-inactive
+		cursor: default
+		color: $gray 
+		border: 1px solid #8c9aa6
