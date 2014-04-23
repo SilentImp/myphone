@@ -252,7 +252,7 @@ a:hover { color: #2e86cd; }
 .item.is-active { z-index: 20000; }
 .item:nth-child(7n) .item__popup { left: auto; right: 0; }
 .item:nth-child(7n) .item__popup .item { float: right; margin: 0 0 0 20px; }
-.item .item__del { position: absolute; top: 0; right: 0; }
+.item .item__del { position: absolute; top: -5px; right: -5px; }
 
 .item__name a, .item__brand a { color: #575050; }
 
