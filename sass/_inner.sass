@@ -104,7 +104,7 @@
 	i
 		position: relative
 		top: -1px
-		display: inline-block
+		display: inline-block  
 		vertical-align: middle
 		+s(link)
 
@@ -114,3 +114,125 @@
 	div
 		display: inline-block
 		vertical-align: top
+
+.article
+	margin: 0 0 70px 288px
+	width: 490px
+	+roman
+	color: #575050 
+	p
+		margin: 18px 0 
+	ul
+		margin: 18px 0 
+	li
+		position: relative
+		padding-left: 8px
+		&:before
+			content: "•"
+			position: absolute
+			left: 0
+			top: -3px
+			font-size: 15px
+	b,strong
+		+bold
+		font-weight: normal
+.article__title
+	font-size: 16px
+	+bold
+
+.faq
+	margin: 0 0 16px 
+	width: 432px
+	border: 1px solid #d5e1eb
+	+border-radius(8px)
+	color: #696969
+.faq__title
+	padding: 9px 15px 
+	+border-radius(8px)
+	background: #7fbded
+	+box-shadow(0 1px 0 rgba(0,0,0,.13))
+	+roman
+	color: #fff
+	cursor: pointer
+	font-size: 12px 
+	+nosel
+	&.is-active	
+		padding: 15px 15px 0
+		color: #575050
+		text-transform: none
+		font-size: 16px
+		+bold
+		background: none
+		+box-shadow(none)
+.faq__main
+	padding: 15px 
+
+.table-title
+	margin-bottom: 12px
+	font-size: 16px
+	+bold
+	color: #575050 
+.table
+	text-align: center
+	text-transform: uppercase
+	td,th
+		padding: 2px 4px 
+		border: 1px solid #d6e2ec
+		height: 25px
+		vertical-align: middle
+		&:last-child	
+			text-align: right
+	td
+		font-size: 11px
+		color: #000
+	th
+		color: $gray
+		font-size: 10px
+		font-weight: normal 
+		&:last-child
+			padding-right: 31px
+.table_order
+	td
+		&:first-child
+			width: 113px
+		&:nth-child(2)
+			width: 135px
+.profile
+	padding: 15px 	
+	.input
+		width: 100%
+	.btn
+		display: block
+		margin: 24px auto 17px
+		width: 118px
+.profile__title
+	font-size: 12px
+	+bold
+	text-transform: uppercase
+	color: #575050
+.address
+	margin: 16px 0
+	position: relative
+	.btn-close
+		right: -5px
+		top: -5px
+.address__title
+	display: block
+	width: 100%
+	margin-bottom: 6px
+	padding: 0 9px 
+	height: 27px
+	background: #7fbded
+	border: 1px solid #7fbded
+	line-height: 25px
+	color: #fff 
+	+border-radius(4px)
+	+box
+	+nosel
+	cursor: pointer
+	+box-shadow(0 1px 0 rgba(0,0,0,.13))
+	&.is-active
+		background: none
+		border: 1px solid #bebebe
+		+box-shadow(none)
+		color: #000 

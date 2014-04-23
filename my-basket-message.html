@@ -3,12 +3,11 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Popup reg</title>
+	<title>My basket message</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
-	<script src="js/jquery.validate.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -136,58 +135,54 @@
 			</div>
 		</div>
 		<div class="header__main">
-			<a href="#" class="header__logo"></a>		
+			<div class="header__left">
+				<a href="#" class="header__logo"></a>		
+				<a href="#" class="header__basket is-active"><em>2</em></a>
+			</div>
+			<div class="header__right">
+				<a href="#">F.A.Q.</a>
+				<a href="#">СМАРТФОНЫ</a>
+			</div>
 		</div>
 	</header>
-	<div class="popup js-popup" style="display:block">
-		<div class="popup__title">Регистрация нового пользователя</div>
-		<form  method="post" action="" class="js-validate-form">
-			<div class="input-row">
-				<label for="firstname" class="input-wrap">
-					<input type="text" class="input" id="firstname" name="firstname" required>
-					<span class="input-wrap__text">Ваше имя</span>
-				</label>
+	<div class="wrap">
+		<aside class="sidebar">
+			<div class="box">
+				<div class="box__main">
+					<div class="box__title">Выбранные смартфоны</div>
+					<div class="basket-item">
+						<a href="#" class="color is-active is-white"></a>
+						<div>iPhone 5 16 GB <br> 750 AZN</div>
+					</div>
+					<div class="basket-item">
+						<a href="#" class="color is-active is-black"></a>
+						<div>iPhone 5 16 GB <br> 750 AZN</div>
+					</div>
+				</div>
+				<div class="box__footer">
+					<div>Итого: 1390 AZN</div>
+					<a href="#" class="btn">ОФОРМИТЬ ЗАКАЗ</a>
+				</div>
 			</div>
-			<div class="input-row">
-				<label for="lastname" class="input-wrap">
-					<input type="text" class="input" id="lastname" name="lastname" required>
-					<span class="input-wrap__text">Ваша фамилия</span>
-				</label>
+		</aside>
+		<div class="main">
+			<div class="box box_fixed-width box_message">
+				<div class="box__main">
+					<div class="box__order">Заказ № 3434 оформлен успешно!</div>
+					<ul class="message">
+						<li>1. iPhone 5 16 GB (white) - 640 AZN</li>
+						<li>2. iPhone 5 S 16 GB (black) - 720 AZN</li>
+					</ul>
+					<p>Оплата 1360 AZN с помощью PayPal прошла успешно!</p>
+					<p>Достаква будет осуществляться 21.02.14 по адресу: <br>
+					Азербайджан, г. Баку, ул. Хагани 14\18, кв. 271 <br> Дмитрий Ничипорук: (073) 848-1716 <br>
+					</p>
+					<div class="info-text">В ближайшее вермя с вами свяжется наш оператор. Если что-то пошло не так. или вам с кем-то хочется поговорить, звоните на нашу горячую линию: 8-055-334-223-1</div>
+				</div>
 			</div>
-			<div class="input-row">
-				<label for="email" class="input-wrap">
-					<input type="email" class="input" id="email" name="email" required>
-					<span class="input-wrap__text">Ваш e-mail</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="password" class="input-wrap">
-					<input type="password" class="input" id="password" name="password" required>
-					<span class="input-wrap__text">Пароль для входа</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="confirm_password" class="input-wrap">
-					<input type="password" class="input" id="confirm_password" name="confirm_password" required>
-					<span class="input-wrap__text">Пароль еще раз</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="tel" class="input-wrap">
-					<input type="tel" class="input" id="tel" name="tel" required>
-					<span class="input-wrap__text">Телефон</span>
-				</label>
-			</div>
-			<div class="input-row input-row_btn">
-				<div class="input-row__info">Заполните пожалуйста все поля, это поможет нам быстрее с вами связаться и доставить ваш заказ. </div>
-				<input type="submit" class="btn" value="РЕГИСТРАЦИЯ">
-			</div>
-		</form>
-		<button class="btn-close js-close"></button>
+		</div>
 	</div>
 	<div class="push"></div>
-
-	
 </div>
 <footer class="footer">
 	<a href="#" class="footer__logo"></a>
@@ -218,6 +213,7 @@
 		</ul>
 	</div>
 </footer>
-<div class="overlay js-overlay" style="display:block"></div>
+<div class="overlay js-overlay"></div>
+
 </body>
 </html>

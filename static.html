@@ -3,12 +3,11 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Popup reg</title>
+	<title>static</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
-	<script src="js/jquery.validate.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -136,58 +135,30 @@
 			</div>
 		</div>
 		<div class="header__main">
-			<a href="#" class="header__logo"></a>		
-		</div>
+			<div class="header__left">
+				<a href="#" class="header__logo"></a>		
+				<a href="#" class="header__basket is-active"><em>2</em></a>
+			</div>
+			<div class="header__right">
+				<a href="#">F.A.Q.</a>
+				<a href="#">СМАРТФОНЫ</a>
+			</div>
+		</div>   
 	</header>
-	<div class="popup js-popup" style="display:block">
-		<div class="popup__title">Регистрация нового пользователя</div>
-		<form  method="post" action="" class="js-validate-form">
-			<div class="input-row">
-				<label for="firstname" class="input-wrap">
-					<input type="text" class="input" id="firstname" name="firstname" required>
-					<span class="input-wrap__text">Ваше имя</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="lastname" class="input-wrap">
-					<input type="text" class="input" id="lastname" name="lastname" required>
-					<span class="input-wrap__text">Ваша фамилия</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="email" class="input-wrap">
-					<input type="email" class="input" id="email" name="email" required>
-					<span class="input-wrap__text">Ваш e-mail</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="password" class="input-wrap">
-					<input type="password" class="input" id="password" name="password" required>
-					<span class="input-wrap__text">Пароль для входа</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="confirm_password" class="input-wrap">
-					<input type="password" class="input" id="confirm_password" name="confirm_password" required>
-					<span class="input-wrap__text">Пароль еще раз</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="tel" class="input-wrap">
-					<input type="tel" class="input" id="tel" name="tel" required>
-					<span class="input-wrap__text">Телефон</span>
-				</label>
-			</div>
-			<div class="input-row input-row_btn">
-				<div class="input-row__info">Заполните пожалуйста все поля, это поможет нам быстрее с вами связаться и доставить ваш заказ. </div>
-				<input type="submit" class="btn" value="РЕГИСТРАЦИЯ">
-			</div>
-		</form>
-		<button class="btn-close js-close"></button>
-	</div>
+		<article class="article">
+			<div class="article__title">Как купить on-line?</div>
+			<p>Для начала нужно опеределиться с тем, что вы хотите преобрести!</p>
+			<p>Создайте идеальную историю жизни! Выполните задание "Жизненные цели", 
+			доступное с 24 уровня, и отправьте персонажей в увлекательное приключение!</p>
+			<ul>
+				<li>Получите доступ к циклу жизни и жизненным целям!</li>
+				<li>Отправляйте персонажей на тот свет и передавайте наследие будущим поколениям</li>
+				<li>Новые черты характера и цели - спортсмены и умники.</li>
+				<li>Все на пляж! Плавайте с маской и трубкой или собирайте ракушки</li>
+				<li>Посетите зал игровых автоматов! Играйте в пинбол и выигрывайте призы на автоматах с игрушками!</li>
+			</ul>
+		</article>
 	<div class="push"></div>
-
-	
 </div>
 <footer class="footer">
 	<a href="#" class="footer__logo"></a>
@@ -218,6 +189,7 @@
 		</ul>
 	</div>
 </footer>
-<div class="overlay js-overlay" style="display:block"></div>
+<div class="overlay js-overlay"></div>
+
 </body>
 </html>

@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Popup reg</title>
+	<title>Cabinet</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -11,7 +11,7 @@
 	<script src="js/jquery.validate.js"></script>
 	<script src="js/common.js"></script>
 </head>
-<body>
+<body>       
 
 <div class="l-layout">
 	<header class="header">
@@ -136,58 +136,157 @@
 			</div>
 		</div>
 		<div class="header__main">
-			<a href="#" class="header__logo"></a>		
+			<div class="header__left">
+				<a href="#" class="header__logo"></a>		
+				<a href="#" class="header__basket is-active"><em>2</em></a>
+			</div>
+			<div class="header__right">
+				<a href="#">F.A.Q.</a>
+				<a href="#">СМАРТФОНЫ</a>
+			</div>
 		</div>
 	</header>
-	<div class="popup js-popup" style="display:block">
-		<div class="popup__title">Регистрация нового пользователя</div>
-		<form  method="post" action="" class="js-validate-form">
-			<div class="input-row">
-				<label for="firstname" class="input-wrap">
-					<input type="text" class="input" id="firstname" name="firstname" required>
-					<span class="input-wrap__text">Ваше имя</span>
-				</label>
+	<div class="wrap">
+		<aside class="sidebar">
+			<div class="box">
+				<div class="profile">
+					<div class="profile__title">Настройки профиля</div>
+					<form  method="post" action="" class="js-validate-form">
+						<div class="input-row">
+							<label for="firstname" class="input-wrap">
+								<input type="text" class="input" id="firstname" name="firstname" required placeholder="Ваше имя">
+							</label>
+						</div>
+						<div class="input-row">
+							<label for="lastname" class="input-wrap">
+								<input type="text" class="input" id="lastname" name="lastname" required placeholder="Ваша фамилия">
+							</label>
+						</div>
+						<div class="input-row">
+							<label for="email" class="input-wrap">
+								<input type="email" class="input" id="email" name="email" required placeholder="Email">
+							</label>
+						</div>
+						<div class="input-row">
+							<label for="password" class="input-wrap">
+								<input type="password" class="input" id="password" name="password" required placeholder="Пароль">
+							</label>
+						</div>
+						<div class="input-row">
+							<label for="tel" class="input-wrap">
+								<input type="tel" class="input" id="tel" name="tel" required placeholder="Телефон">
+							</label>
+						</div>
+						<div class="address js-accordion">
+							<div class="address__title  js-accordion-title">Адрес 1</div>
+							<div class="address__main  js-accordion-list">
+								<div class="input-row">
+									<label class="input-wrap">
+										<div class="select js-select">
+											<span class="input">Азербайджан</span>
+											<select>
+												<option value="Азербайджан">Азербайджан</option>
+												<option value="Україна">Україна</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</div>
+									</label>
+								</div>
+								<div class="input-row">
+									<label class="input-wrap">
+										<input class="input" type="text" placeholder="Город">
+									</label>
+								</div>
+								<div class="input-row">
+									<label class="input-wrap">
+										<input class="input" type="text" placeholder="Улица">
+									</label>
+								</div>
+								<div class="input-row">
+									<label class="input-wrap">
+										<input class="input" type="text" placeholder="Увартира">
+									</label>
+								</div>
+							</div>
+							<button type="button" class="btn-close js-del-item"></button>
+						</div>
+						<div class="js-new-address-group"></div>
+						<button type="button" class="address__title js-add-address">Добавить новый адрес</button> 
+						<input type="submit" class="btn" value="СОХРАНИТЬ">
+						<div class="info-text">Если данные вашего профиля изменились, рекомендуем изменить информацию в полях, чтобы не было сюрпризов! :)</div>
+					</form>
+					<div class="js-new-address" hidden>
+						<div class="address js-accordion js-hidden-list" >
+								<div class="address__title  js-accordion-title">Адрес <span></span></div>
+								<div class="address__main  js-accordion-list">
+									<div class="input-row">
+										<label class="input-wrap">
+											<div class="select js-select">
+												<span class="input">Азербайджан</span>
+												<select>
+													<option value="Азербайджан">Азербайджан</option>
+													<option value="Україна">Україна</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+												</select>
+											</div>
+										</label>
+									</div>
+									<div class="input-row">
+										<label class="input-wrap">
+											<input class="input" type="text" placeholder="Город">
+										</label>
+									</div>
+									<div class="input-row">
+										<label class="input-wrap">
+											<input class="input" type="text" placeholder="Улица">
+										</label>
+									</div>
+									<div class="input-row">
+										<label class="input-wrap">
+											<input class="input" type="text" placeholder="Увартира">
+										</label>
+									</div>
+								</div>
+								<button type="button" class="btn-close js-del-item"></button>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="input-row">
-				<label for="lastname" class="input-wrap">
-					<input type="text" class="input" id="lastname" name="lastname" required>
-					<span class="input-wrap__text">Ваша фамилия</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="email" class="input-wrap">
-					<input type="email" class="input" id="email" name="email" required>
-					<span class="input-wrap__text">Ваш e-mail</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="password" class="input-wrap">
-					<input type="password" class="input" id="password" name="password" required>
-					<span class="input-wrap__text">Пароль для входа</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="confirm_password" class="input-wrap">
-					<input type="password" class="input" id="confirm_password" name="confirm_password" required>
-					<span class="input-wrap__text">Пароль еще раз</span>
-				</label>
-			</div>
-			<div class="input-row">
-				<label for="tel" class="input-wrap">
-					<input type="tel" class="input" id="tel" name="tel" required>
-					<span class="input-wrap__text">Телефон</span>
-				</label>
-			</div>
-			<div class="input-row input-row_btn">
-				<div class="input-row__info">Заполните пожалуйста все поля, это поможет нам быстрее с вами связаться и доставить ваш заказ. </div>
-				<input type="submit" class="btn" value="РЕГИСТРАЦИЯ">
-			</div>
-		</form>
-		<button class="btn-close js-close"></button>
+		</aside>
+		<div class="main">
+			<div class="table-title">Ваши заказы</div>
+			<table class="table table_order">
+				<thead>
+					<tr>
+						<th>ДАТА</th>
+						<th>Номер ЗАКАЗА</th>
+						<th>СТАТУС - ТРЕКИНГ</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>18.02.14</td>
+						<td>№ - CMP91231</td>
+						<td>
+							<div class="badge is-progrees">выполняется</div>
+						</td>
+					</tr>
+					<tr>
+						<td>18.02.14</td>
+						<td>№ - CMP91231</td>
+						<td>
+							<div class="badge is-complete">1ZE6W3110486240314</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	<div class="push"></div>
-
-	
 </div>
 <footer class="footer">
 	<a href="#" class="footer__logo"></a>
@@ -218,6 +317,7 @@
 		</ul>
 	</div>
 </footer>
-<div class="overlay js-overlay" style="display:block"></div>
+<div class="overlay js-overlay"></div>
+
 </body>
 </html>
