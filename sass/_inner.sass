@@ -5,10 +5,11 @@
 	float: left
 	position: relative
 	margin: 0 16px 16px 0
-	padding: 22px 0 12px 
+	padding: 20px 0 12px 
 	width: 128px
 	height: 344px
 	+box
+	line-height: 1.4
 	+border-radius(8px)
 	background: #fff
 	font-size: 12px
@@ -19,6 +20,7 @@
 	&.is-active
 		z-index: 20000
 	&:nth-child(7n)
+		margin-right: 0
 		.item__popup
 			left: auto
 			right: 0
@@ -35,7 +37,7 @@
 		color: #575050     
 .item__img
 	display: block
-	margin: 14px auto 10px 
+	margin: 12px auto 10px 
 	width: 100px
 	position: relative
 	text-align: center
@@ -168,15 +170,16 @@
 	padding: 15px 
 
 .table-title
-	margin-bottom: 12px
+	margin: 17px 0 12px
 	font-size: 16px
 	+bold
 	color: #575050 
 .table
 	text-align: center
 	text-transform: uppercase
+	background: #fff 
 	td,th
-		padding: 2px 4px 
+		padding: 2px 7px
 		border: 1px solid #d6e2ec
 		height: 25px
 		vertical-align: middle
@@ -194,24 +197,27 @@
 .table_order
 	td
 		&:first-child
-			width: 113px
+			width: 80px
 		&:nth-child(2)
-			width: 135px
+			width: 129px
+		&:last-child
+			padding-right: 3px
 .profile
-	padding: 15px 	
+	padding: 20px 15px 	
 	.input
 		width: 100%
 	.btn
 		display: block
-		margin: 24px auto 17px
+		margin: 23px auto 17px
 		width: 118px
-.profile__title
+.profile__title	
+	margin-bottom: 13px
 	font-size: 12px
 	+bold
 	text-transform: uppercase
 	color: #575050
 .address
-	margin: 16px 0
+	margin: 22px 0 -7px
 	position: relative
 	.btn-close
 		right: -5px
@@ -236,3 +242,5 @@
 		border: 1px solid #bebebe
 		+box-shadow(none)
 		color: #000 
+button.address__title
+	margin-top: 22px

@@ -38,7 +38,7 @@ a
 	margin: 0 auto -130px
 	position: relative
 	padding: 0 16px 
-	width: 1008px  
+	width: 992px  
 	min-height: 100%
 	height: auto !important
 	height: 100% 
@@ -54,15 +54,21 @@ a
 	padding: 0 16px 
 	width: 1008px 
 .header
-	margin-bottom: 29px
+	margin-bottom: 28px
 .header__top
-	margin-bottom: 30px
+	margin-bottom: 26px
 	padding: 10px 0 4px
 	border-bottom: 1px solid $border
 	+clr
 	.header__left
 		height: 30px
 		line-height: 30px
+	a
+		display: inline-block
+		vertical-align: middle
+	.header__select
+		&:last-child
+			margin-right: -16px
 .header__user,
 .header__tel,
 .header__select 
@@ -81,12 +87,12 @@ a
 		+s(user)
 .header__tel
 	position: relative
-	margin: 0 19px 0 79px
+	margin: 0 19px 0 78px
 	padding-left: 20px
 	&:before
 		content: "" 
 		position: absolute
-		top: -1px
+		top: -4px
 		left: 0
 		+s(tel)
 
@@ -101,15 +107,16 @@ a
 	position: relative
 	+clr
 	.header__right
+		padding-top: 11px
 		a
 			display: inline-block
-			margin-left: 35px
+			margin-left: 38px
 			vertical-align: middle
 			font-size: 16px
 			+roman
 			text-transform: uppercase
 		.header__filter
-			margin-left: 5px
+			margin: -11px -7px 0 -1px
 .header__logo    
 	display: inline-block
 	vertical-align: middle
