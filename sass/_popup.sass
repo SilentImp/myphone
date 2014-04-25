@@ -1,3 +1,15 @@
+.has-open-filter
+	.items-wrap
+		float: left
+		width: 720px
+		.item
+			&:nth-child(5n)
+				margin-right: 0
+			&:nth-child(7n)
+				margin-right: 16px
+	.filter
+		float: right
+		display: block
 .overlay
 	display: none
 	position: fixed
@@ -35,10 +47,8 @@
 	color: #575050 
   
 .filter
-	position: absolute
+	position: relative
 	display: none
-	right: 0
-	top: 73px
 	padding: 14px 
 	z-index: 20000
 	width: 272px
@@ -61,11 +71,8 @@
 	.btn-clear
 		right: 0
 		top: 0
-		display: none
 	&.is-active
 		color: #000 
-		.btn-clear
-			display: block
 .filter__opt
 	font-size: 0
 	margin-right: -20px
