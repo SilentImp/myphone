@@ -3,12 +3,14 @@ $blue_dark: #2e86cd
 $border: #d6e2ec
 $gray: #768896
 $red: #db616c
+$brown: #575050
 +font(helveticaltstd-roman, helveticaltstd-roman)
 +font(helveticaltstd-bold, helveticaltstd-bold)
 =roman
 	font-family: "helveticaltstd-roman", Arial, sans-serif 
 =bold
-	font-family: "helveticaltstd-bold", Arial, sans-serif 
+	font-family: Verdana, sans-serif 
+	font-weight: bold
 body
 	font-size: 12px 
 	font-family: Arial, sans-serif 
@@ -18,6 +20,7 @@ body
 		background: rgba(19, 122, 233, .2)
 	+scrollbar
 		width: 4px
+		height: 4px
 		overflow: hidden
 		background: #e3e3e3 
 		border-radius: 2px
@@ -26,6 +29,7 @@ body
 		background: $blue_dark
 	+scrollbar-track-piece 
 		width: 4px 
+		height: 4px
 		border-radius: 2px
 		
 a
@@ -120,6 +124,7 @@ a
 			margin: -11px -7px 0 -1px
 .header__logo    
 	display: inline-block
+	margin: 3px 0 0 -3px 
 	vertical-align: middle
 	margin-right: 14px
 	+s(logo)

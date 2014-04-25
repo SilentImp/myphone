@@ -170,6 +170,8 @@ $(document).ready(function() {
             }
             else {
                 $(this).toggleClass("is-active");
+                $(this).parent().find(".address__title").hide();   
+                
                 $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
             }
             
@@ -246,6 +248,13 @@ $(document).ready(function() {
     	return false;
     });
 
-
+    $(".js-table-row").on("click", function(){
+        $(this).next().toggle();
+        return false;
+    });
+    $(".js-collapse-tr").on("click", function(){
+        $(this).parents(".js-table-detail").hide();
+        return false;
+    });
 
 });

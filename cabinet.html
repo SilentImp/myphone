@@ -178,8 +178,12 @@
 							</label>
 						</div>
 						<div class="address js-accordion">
-							<div class="address__title  js-accordion-title">Адрес 1</div>
 							<div class="address__main  js-accordion-list">
+								<div class="input-row">
+									<label class="input-wrap">
+										<input type="text" class="input" value="Адрес 1">
+									</label>
+								</div>
 								<div class="input-row">
 									<label class="input-wrap">
 										<div class="select js-select">
@@ -215,6 +219,11 @@
 						<div class="address js-accordion js-hidden-list">
 							<div class="address__title  js-accordion-title">Адрес 2</div>
 							<div class="address__main  js-accordion-list">
+								<div class="input-row">
+									<label class="input-wrap">
+										<input type="text" class="input" value="Адрес 2">
+									</label>
+								</div>
 								<div class="input-row">
 									<label class="input-wrap">
 										<div class="select js-select">
@@ -258,6 +267,11 @@
 								<div class="address__main  js-accordion-list">
 									<div class="input-row">
 										<label class="input-wrap">
+											<input type="text" class="input" value="Адрес">
+										</label>
+									</div>
+									<div class="input-row">
+										<label class="input-wrap">
 											<div class="select js-select">
 												<span class="input">Азербайджан</span>
 												<select>
@@ -294,7 +308,7 @@
 		</aside>
 		<div class="main">
 			<div class="table-title">Ваши заказы</div>
-			<table class="table table_order">
+			<table class="table table_order js-table">
 				<thead>
 					<tr>
 						<th>ДАТА</th>
@@ -303,18 +317,110 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr class="js-table-row">
 						<td>18.02.14</td>
 						<td>№ - CMP91231</td>
 						<td>
 							<div class="badge is-progrees">выполняется</div>
 						</td>
 					</tr>
-					<tr>
+					<tr class="table__details js-table-detail">
+						<td colspan="3">
+							<table>
+								<thead>
+									<tr>
+										<th class="table__item1">НАИмЕНОВАНИЕ</th>
+										<th class="table__item2">кол-во</th>
+										<th class="table__item3">ЦЕНА</th>
+										<th class="table__item4">серийный номер </th>
+										<th class="table__item5">tracking number</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="table__item1">
+											<a href="#"><img src="img/item.png" width="28px" alt=""></a>
+											<div>
+												Apple <br>iPhone 5 16 GB <br>black
+											</div>
+										</td>
+										<td class="table__item2">1</td>
+										<td class="table__item3"><strong>560 AZN</strong></td>
+										<td class="table__item4">BRZ900323-432-122</td>
+										<td class="table__item5">KFT03-24332-12DFR</td>
+									</tr>
+									<tr>
+										<td class="table__item6" colspan="2">
+											<i class="icon-car"></i>
+											<div>Доставка: Баку, ул. Хагани 14\20, кв.271 Нечипорук Дмитрий, (067) 546-23-54</div>
+										</td>
+										<td class="table__item7"><strong>5 AZN</strong></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="table__item6" colspan="2">
+											<a href="#" class="btn js-collapse-tr">OK</a>
+										</td>
+										<td class="table__item7">Итого: 565 AZN</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="js-table-row">
 						<td>18.02.14</td>
 						<td>№ - CMP91231</td>
 						<td>
 							<div class="badge is-complete">1ZE6W3110486240314</div>
+						</td>
+					</tr>
+					<tr class="table__details js-table-detail">
+						<td colspan="3">
+							<table>
+								<thead>
+									<tr>
+										<th class="table__item1">НАИмЕНОВАНИЕ</th>
+										<th class="table__item2">кол-во</th>
+										<th class="table__item3">ЦЕНА</th>
+										<th class="table__item4">серийный номер </th>
+										<th class="table__item5">tracking number</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="table__item1">
+											<a href="#"><img src="img/item.png" width="28px" alt=""></a>
+											<div>
+												Apple <br>iPhone 5 16 GB <br>black
+											</div>
+										</td>
+										<td class="table__item2">1</td>
+										<td class="table__item3"><strong>560 AZN</strong></td>
+										<td class="table__item4">BRZ900323-432-122</td>
+										<td class="table__item5">KFT03-24332-12DFR</td>
+									</tr>
+									<tr>
+										<td class="table__item6" colspan="2">
+											<i class="icon-car"></i>
+											<div>Доставка: Баку, ул. Хагани 14\20, кв.271 Нечипорук Дмитрий, (067) 546-23-54</div>
+										</td>
+										<td class="table__item7"><strong>5 AZN</strong></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="table__item6" colspan="2">
+											<a href="#" class="btn js-collapse-tr">OK</a>
+										</td>
+										<td class="table__item7">Итого: 565 AZN</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
 						</td>
 					</tr>
 				</tbody>
