@@ -235,11 +235,20 @@ $(document).ready(function() {
         event.stopPropagation();
     });
 
-    $(".js-select select").on("change", function(){
+    $(".js-select select").on("change", function(event){
     	var val = $(this).val();
-    	$(this).parents(".js-select").find(".input").text(val);
+        $(this).parents(".js-select").find(".input").text(val);
+    	event.stopPropagation();
     });
-
+    $(".js-select").on("click", function(event){
+        if ($(this).parents(".js-select").hasClass("is-active")) {
+            $(this).parents(".js-select").removeClass("is-active")
+        }
+        else {
+            $(this).parents(".js-select").addClass("is-active")
+        }
+       //event.stopPropagation();
+    });
     $(".js-add-address").on("click", function(){
     	var counter = $(this).parents(".js-validate-form").find(".address").length;
     	$(".js-new-address .js-accordion-title span").text(counter+1);

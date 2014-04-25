@@ -156,12 +156,12 @@
 	&:hover
 		border-color: #7fbded 
 		+box-shadow(inset 0 0 0 1px #7fbded)
-	&:last-child	
-		margin-top: 32px
-		.faq__title
-			margin-bottom: -2px
-		.faq__main
-			padding-bottom: 4px
+	// &:last-child	
+	// 	margin-top: 32px
+	// 	.faq__title
+	// 		margin-bottom: -2px
+	// 	.faq__main
+	// 		padding-bottom: 4px
 .faq__title
 	padding: 9px 15px 
 	+border-radius(8px)
@@ -338,7 +338,9 @@ button.address__title
 
 .step
 	overflow: hidden
+	margin-bottom: 25px
 	+border-radius(8px)
+
 .step__item
 	position: relative
 	float: left
@@ -355,12 +357,83 @@ button.address__title
 			display: none 
 	&:after
 		content: "" 
-		position: absolute
+		position: absolute  
 		top: 0
-		right: 0
+		right: -10px
 		+s(step)
+		z-index: 100
+	&:before
+		content: ""
+		position: absolute
+		right: -8px
+		top: 0
+		+arr(8,16,#d6e2ec,r) 
 	&.is-active
+		z-index: 5
 		background: #80bdee
-		color: #fff  
-		&:after
-			+sp(step-act)    
+		color: #fff      
+		&:before
+			+arr(8,16,#80bdee,r) 
+.step__1
+	z-index: 6
+	&.is-active	
+		z-index: 10
+.step__2
+	z-index: 3
+	&.is-active	
+		z-index: 9
+.step__3
+	z-index: 2
+	&.is-active	
+		z-index: 8
+.step__4
+	z-index: 1
+.step-content
+	width: 350px  
+	
+.pay-wrap
+	width: 60%	
+.pay
+	display: inline-block
+	vertical-align: top
+	margin: 0 13px 17px 0
+	width: 80px
+	height: 80px
+	text-align: center
+	line-height: 80px
+	+border-radius(8px)
+	background: #fff
+	+box-shadow(0 1px 0 rgba(0,0,0,.13))
+	+tr(all .2s linear)
+	&:hover
+		+box-shadow(none)
+	i
+		display: inline-block
+		vertical-align: middle
+.pay_visa
+	i
+		+s(pay-visa)
+.pay_web
+	i
+		+s(pay-web)
+.pay_ym
+	i
+		+s(pay-ym)
+.pay_qiwi
+	i
+		+s(pay-qiwi)
+.pay_amex
+	i
+		+s(pay-amex)
+.pay_pall
+	i
+		+s(pay-pall)
+.pay_del
+	i
+		+s(car)
+.pay_mail
+	i
+		+s(pay-mail)
+.pay-info
+	font-size: 10px
+	color: #4c4f5a
