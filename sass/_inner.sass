@@ -334,3 +334,33 @@
 		color: #000 
 button.address__title
 	margin-top: 22px
+	
+
+.step
+	overflow: hidden
+	+border-radius(8px)
+.step__item
+	position: relative
+	float: left
+	width: 25%
+	padding: 2px 0 
+	text-align: center
+	background: #d6e2ec 
+	+box
+	text-transform: uppercase
+	font-size: 10px
+	color: $gray 
+	&:last-child
+		&:after
+			display: none 
+	&:after
+		content: "" 
+		position: absolute
+		top: 0
+		right: 0
+		+s(step)
+	&.is-active
+		background: #80bdee
+		color: #fff  
+		&:after
+			+sp(step-act)    
