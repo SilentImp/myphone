@@ -57,6 +57,19 @@ $(document).ready(function() {
         //$(".js-filter").fadeOut(200)
         event.stopPropagation();
     });
+    overlay.on("click", function(event){
+        popup.fadeOut(200);
+        overlay.fadeOut(200);
+        event.stopPropagation();
+    });
+    // overlay.hover(
+    //     function() {
+    //         $(".js-popup-basket").fadeOut(200);
+    //         overlay.fadeOut(200)     
+    //     }, function() {
+            
+    //     }
+    // );
 	$(".js-validate-form").each(function(){
 		if ($(this).length > 0) {
 			$(this).validate({
