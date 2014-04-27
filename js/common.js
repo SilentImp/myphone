@@ -266,4 +266,17 @@ $(document).ready(function() {
         return false;
     });
 
+    $(".js-box-basket").hover(
+        function() {
+            setTimeout(function(){
+                $(".js-popup-basket").fadeIn(200);
+                overlay.fadeIn(200);  
+            },1000);
+            
+        }, function() {
+            $(this).find(".js-popup").fadeOut(200);
+            overlay.fadeOut(200);
+        }
+    );
+
 });

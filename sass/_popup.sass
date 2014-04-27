@@ -35,10 +35,8 @@
 	.btn-close
 		top: -5px
 		right: -5px
-// .popup_reg
-// 	width: 334px
-// .popup_enter
-// 	width: 312px
+.popup_no-padding
+	padding: 0
 .popup__title
 	margin-bottom: 12px
 	font-size: 16px
@@ -46,6 +44,21 @@
 	+bold 
 	color: $brown 
   
+.popup__item
+	border-top: 1px solid #d6e2ec 
+	padding: 7px 11px 8px
+	color: $brown
+	+clr
+	&:first-child
+		border-top: 0
+	a
+		float: left
+		margin-right: 17px
+	span
+		+bold
+	.basket-item
+		overflow: hidden
+		font-size: 12px
 .filter
 	position: relative
 	display: none
