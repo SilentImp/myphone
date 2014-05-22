@@ -177,12 +177,14 @@ $(document).ready(function() {
 
             if ($(this).parent().hasClass("js-one-active")) {
                 $(".js-accordion-title").removeClass("is-active");
+                $(".js-accordion").removeClass("is-active");
                 $(".js-accordion-list").slideUp("fast");
                 $(this).toggleClass("is-active");
                 $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
             }
             else {
                 $(this).toggleClass("is-active");
+                $(this).parents(".js-accordion").toggleClass("is-active");
                 $(this).parent().find(".address__title").hide();   
                 
                 $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
@@ -235,7 +237,7 @@ $(document).ready(function() {
     $(".js-open-filter").on("click", function(event){
     	$(this).toggleClass("is-active");
     	$(this).next().toggleClass("is-active");
-    	$(".js-filter").fadeIn(200);
+    	$(".js-filter").fadeToggle(200);
         $("body").toggleClass("has-open-filter");
 		return false;
         event.stopPropagation();
@@ -291,5 +293,41 @@ $(document).ready(function() {
             overlay.fadeOut(200);
         }
     );
+
+    function ui_slider_range() {
+        $(".js-ui-slider-range").each(function(){
+            var slider = $(this).find(".js-ui-slider-main");
+            var input_from = $(this).find(".js-ui-slider-from");
+            var input_to = $(this).find(".js-ui-slider-to");
+            var min_val = +$(this).attr("data-min");
+            var max_val = +$(this).attr("data-max");
+            slider.slider({
+                range: true,
+                min: min_val,
+                max: max_val,
+                step: 25, 
+                values: [ min_val, max_val ],
+                slide: function( event, ui ) {
+                    $(this).find(".ui-slider-handle").html("<span></span>");
+                    //var handle_0 = $(this).find(".ui-slider-range").next().find("span")
+                    //var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
+                    input_from.text(ui.values[0]);
+                    input_to.text(ui.values[1]);
+                    //handle_0.text(ui.values[0]);
+                    //handle_1.text(ui.values[1]);
+                }
+            });
+            //console.log(handle_0);
+            //console.log(handle_1);
+            $(this).find(".ui-slider-handle").html("<span></span>");
+            //var handle_0 = $(this).find(".ui-slider-range").next().find("span")
+            //var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
+            //handle_0.text(slider.slider( "values", 0 ));
+            //handle_1.text(slider.slider( "values", 1 ));
+            input_from.text(slider.slider( "values", 0 ));
+            input_to.text(slider.slider( "values", 1 ));
+        });
+    }
+    ui_slider_range();
 
 });

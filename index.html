@@ -8,6 +8,7 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -1091,6 +1092,22 @@
 						<a href="#" class="key js-filter-key">
 							<span class="color is-green"></span>
 						</a>
+					</div>
+				</div>
+			</div>
+			<div class="filter__item">
+				<!-- <div class="filter__title">
+				Цвет
+					<button class="btn-clear js-clear-filter"></button>
+				</div> -->
+				<div class="ui-slider js-ui-slider-range" data-min="50" data-max="4000">
+					<div class="ui-slider__range filter__title">
+						Цена
+						от <span class="js-ui-slider-from"></span>$
+						до <span class="js-ui-slider-to"></span>$
+					</div>
+					<div class="ui-slider__main">
+						<div class="js-ui-slider-main"></div>
 					</div>
 				</div>
 			</div>
