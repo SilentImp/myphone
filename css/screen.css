@@ -259,6 +259,19 @@ a:hover { color: #2e86cd; }
 .select.is-active .input:after { background-position: 0 -1279px; }
 .select select { position: relative; width: 100%; height: 26px; z-index: 2; opacity: 0; cursor: pointer; }
 
+.radio-wrap { margin-bottom: 10px; }
+
+.radio { position: relative; min-height: 16px; display: inline-block; }
+
+.radio__input { position: absolute; left: 0; top: 0; width: 16px; height: 16px; opacity: 0; }
+.radio__input:checked + .radio__text:before { border: 2px solid #7fbded; }
+.radio__input:checked + .radio__text:after { display: block; }
+
+.radio__text { display: inline-block; position: relative; vertical-align: middle; padding-left: 24px; color: black; font-size: 12px; }
+.radio__text span { display: block; color: #8596a3; }
+.radio__text:before { content: ""; position: absolute; top: 0; left: 0; width: 16px; height: 16px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-radius: 50%; border: 1px solid #d5e1eb; }
+.radio__text:after { content: ""; display: none; position: absolute; left: 5px; top: 5px; width: 6px; height: 6px; border-radius: 50%; background: #7fbded; }
+
 .icon { display: inline-block; vertical-align: middle; }
 
 .icon-azn { background: url('../img/icons-sc46db5b7b2.png') 0 -1029px no-repeat; width: 10px; height: 8px; }

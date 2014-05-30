@@ -218,7 +218,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="faq step-content js-accordion">
+			<div class="faq step-content js-accordion js-hidden-list">
 				<div class="faq__title js-accordion-title">Доставка на дом, в Азербайджане (5 AZN)</div>
 				<div class="faq__main js-accordion-list">
 					<form  method="post" action="" class="js-validate-form">
@@ -263,41 +263,28 @@
 					</form>
 				</div>
 			</div>
-			<div class="faq step-content js-accordion js-hidden-list">
-				<div class="faq__title js-accordion-title">Мои адреса</div>
+			<div class="faq step-content js-accordion is-active">
+				<div class="faq__title js-accordion-title">Мои адреса (5 AZN)</div>
 				<div class="faq__main js-accordion-list">
 					<form  method="post" action="" class="js-validate-form">
-						<div class="input-row">
-							<div class="input-wrap input-wrap_select">
-								<div class="select js-select">
-									<span class="input">Азербайджан</span>
-									<select>
-										<option value="Азербайджан">Азербайджан</option>
-										<option value="Україна">Україна</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-									</select>
-								</div>
-								<span class="input-wrap__text">Выберите город</span>
-							</div>
-						</div>
-						<div class="input-row">
-							<label for="street" class="input-wrap"> 
-								<input class="input" type="text" name="street" id="street" required>
-								<span class="input-wrap__text">Выберите улицу</span>
+						<div class="radio-wrap">
+							<label class="radio">
+								<input  class="radio__input" type="radio" name="name1" checked>
+								<span  class="radio__text">
+									Дом
+									<span>Азербайджан</span> 
+									<span>г. Баку. ул. Хагани 32\1, кв. 12</span>
+								</span>
 							</label>
 						</div>
-						<div class="input-row">
-							<label for="house" class="input-wrap">
-								<input class="input" type="text" name="house" id="house" required>
-								<span class="input-wrap__text">Укажите номер дома</span>
-							</label>
-						</div>
-						<div class="input-row">
-							<label for="flat" class="input-wrap">
-								<input class="input" type="text" name="flat" id="flat" required>
-								<span class="input-wrap__text">Номер квартиры</span>
+						<div class="radio-wrap">
+							<label class="radio">
+								<input  class="radio__input" type="radio" name="name1">
+								<span  class="radio__text">
+									Офис
+									<span>Азербайджан</span> 
+									<span>г. Баку. ул. Левченко 17, оф.112</span>
+								</span>
 							</label>
 						</div>
 						<div class="input-row input-row_btn-left">

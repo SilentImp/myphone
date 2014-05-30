@@ -504,3 +504,56 @@
 		z-index: 2
 		opacity: 0
 		cursor: pointer
+		
+
+.radio-wrap
+	margin-bottom: 10px
+.radio
+	position: relative
+	min-height: 16px
+	display: inline-block
+.radio__input
+	position: absolute
+	left: 0
+	top: 0
+	width: 16px   
+	height: 16px
+	opacity: 0
+	&:checked
+		+ .radio__text
+			&:before
+				border: 2px solid #7fbded
+			&:after
+				display: block
+.radio__text
+	display: inline-block
+	position: relative
+	vertical-align: middle
+	padding-left: 24px
+	color: #000
+	font-size: 12px
+	span
+		display: block
+		color: #8596a3 
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 16px
+		height: 16px
+		+box
+		border-radius: 50%
+		border: 1px solid #d5e1eb 
+	&:after
+		content: ""
+		display: none
+		position: absolute
+		left: 5px
+		top: 5px
+		width: 6px
+		height: 6px
+		border-radius: 50%
+		background: #7fbded 
+ 			
+
