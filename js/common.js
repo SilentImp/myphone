@@ -50,6 +50,11 @@ $(document).ready(function() {
         event.stopPropagation();
     });
 
+    $(".js-register-link").on("click",function(event){
+        event.preventDefault();
+        $(".register-title").trigger("click");
+    });
+
     $(".js-close").on("click", function(event){
     	$(this).parent().fadeOut(200);
     	overlay.fadeOut(200);

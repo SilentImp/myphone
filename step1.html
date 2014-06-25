@@ -173,8 +173,41 @@
 				<li class="step__item">Оплата</li>
 				<li class="step__item">Подтверждение</li>
 			</ul>
-			<div class="faq step-content js-accordion">
-				<div class="faq__title js-accordion-title">Регистрация нового пользователя</div>
+			
+
+
+
+			<div class="faq step-content is-active js-accordion">
+				<div class="faq__title js-accordion-title">Авторизация</div>
+				<div class="faq__main js-accordion-list">
+					<a href="#" class="js-register-link">Зарегистрироваться</a>
+					<form  method="post" action="" class="js-enter-form">
+						<div class="input-row">
+							<label for="email" class="input-wrap">
+								<input type="email" class="input" id="email" name="email" required>
+								<span class="input-wrap__text">Ваш e-mail</span>
+							</label>
+						</div>
+						<div class="input-row">
+							<label for="password" class="input-wrap">
+								<input type="password" class="input" id="password" name="password" required>
+								<span class="input-wrap__text">Пароль для входа</span>
+							</label>
+						</div>
+						<div class="input-row input-row_btn">
+							<div class="input-row__info">
+								<p>Введите. подалуйста, e-mail и пароль которые вы указывали при регистрации на этом сайте </p>
+								<a href="#">Забыли пароль?</a>
+							</div>
+							<input type="submit" class="btn" value="ВОЙТИ">
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+			<div class="faq step-content js-accordion js-hidden-list">
+				<div class="faq__title register-title js-accordion-title">Регистрация нового пользователя</div>
 				<div class="faq__main js-accordion-list">
 					<form  method="post" action="" class="js-validate-form">
 						<div class="input-row">
@@ -220,32 +253,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="faq step-content js-accordion js-hidden-list">
-				<div class="faq__title js-accordion-title">Вход (авторизация)</div>
-				<div class="faq__main js-accordion-list">
-					<form  method="post" action="" class="js-enter-form">
-						<div class="input-row">
-							<label for="email" class="input-wrap">
-								<input type="email" class="input" id="email" name="email" required>
-								<span class="input-wrap__text">Ваш e-mail</span>
-							</label>
-						</div>
-						<div class="input-row">
-							<label for="password" class="input-wrap">
-								<input type="password" class="input" id="password" name="password" required>
-								<span class="input-wrap__text">Пароль для входа</span>
-							</label>
-						</div>
-						<div class="input-row input-row_btn">
-							<div class="input-row__info">
-								<p>Введите. подалуйста, e-mail и пароль которые вы указывали при регистрации на этом сайте </p>
-								<a href="#">Забыли пароль?</a>
-							</div>
-							<input type="submit" class="btn" value="ВОЙТИ">
-						</div>
-					</form>
-				</div>
-			</div>
+
 		</div>
 	</div>
 	<div class="push"></div>

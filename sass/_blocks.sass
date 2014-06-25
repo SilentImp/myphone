@@ -217,43 +217,45 @@
 	border-style: solid 
 	background: #fff 
 	+border-radius(50%)
-	
 	&.is-white
 		border: 2px solid #e4e4e4
 	&.is-black
 		border-color: #000
 		&:hover
-			background: #000
+			background-color: #000
 	&.is-red
 		border-color: #e03a3a
 		&:hover
-			background: #e03a3a
+			background-color: #e03a3a
 	&.is-yellow
 		border-color: #fab32b
 		&:hover
-			background: #fab32b
+			background-color: #fab32b
 	&.is-blue
 		border-color: #56b7fb
 		&:hover
-			background: #56b7fb
+			background-color: #56b7fb
 	&.is-green
 		border-color: #3fb624
 		&:hover
-			background: #3fb624
+			background-color: #3fb624
 	&.is-active
+		background-image: url(../img/icons/ok.png) 
+		background-position: 50% 50% 
+		background-repeat: no-repeat
 		position: relative
 		&.is-white
-			background: #fff 
+			background-color: #fff 
 		&.is-black
-			background: #000
+			background-color: #000
 		&.is-red
-			background: #e03a3a
+			background-color: #e03a3a
 		&.is-yellow
-			background: #fab32b
+			background-color: #fab32b
 		&.is-blue
-			background: #56b7fb
+			background-color: #56b7fb
 		&.is-green
-			background: #3fb624 
+			background-color: #3fb624 
 			
 .price
 	position: relative
@@ -378,6 +380,9 @@
 	.btn
 		margin: 14px 0 0 
 		color: #000 
+		&:first-child
+			margin: -4px 0 3px
+			padding: 5px 10px 4px 
 .box_fixed-width
 	width: 344px
 	+box

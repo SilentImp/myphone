@@ -59,6 +59,7 @@ a
 	padding: 0 16px 
 	width: 1008px 
 .header
+	+clr
 	margin-bottom: 28px
 .header__top
 	margin-bottom: 26px
@@ -100,6 +101,29 @@ a
 		top: -4px
 		left: 0
 		+s(tel)
+
+.header__filter__status
+	margin: 10px 0 0
+	font-size: 11px
+	line-height: 13px
+	max-width: 100%
+	float: left
+	+clr
+	.js-clear-filter
+		float: right
+		margin-left: 5px
+	ul
+		display: block
+		overflow: hidden
+		position: relative
+		white-space: nowrap
+		text-overflow: ellipsis 
+		li
+			display: inline
+			&:last-child:after
+				display: none
+			&:after
+				content: ","
 
 .header__select  
 	color: $gray 

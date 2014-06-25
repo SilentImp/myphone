@@ -62,7 +62,8 @@
 .filter
 	position: relative
 	display: none
-	padding: 14px 
+	// padding: 14px 
+	padding: 10px 3px 
 	z-index: 20000
 	width: 272px
 	+box
@@ -73,22 +74,109 @@
 		top: -6px
 		right: -6px
 .filter__title
-	position: relative 
-	margin-bottom: 12px
+	position: relative
+	height: 30px 
+	margin-bottom: 2px
 	padding-right: 30px
+	padding-left: 11px
 	overflow: hidden
 	font-size: 16px
 	cursor: pointer
+	background-color: #80bdee
+	border-radius: 3px
+	color: #FFF
 	+roman
-	color: #458fd0
+	line-height: 30px
+	// color: #458fd0
+	.filter__title-wrap
+		display: inline-block
+		&::first-letter
+			// color: #F00
+			font-weight: bold
+	&.ui-slider__range
+		background-color: #FFF
+		color: #000
+		&::first-letter
+			font-weight: normal
 	.btn-clear
-		right: 0
-		top: 0
+		width: 16px
+		line-height: 0
+		font-size: 0
+		height: 16px
+		background-color: #FFF
+		border-radius: 100% 
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin-right: 8px
+		background-image: url(../img/icons/close-active.png)
+		background-position: 50% 50%
+		background-repeat: no-repeat 
+		top: -1px
+	&.ui-slider__range,
 	&.is-active
+		background-color: #FFF  
 		color: #000 
+		.btn-clear
+			background-color: #80bdee 
+			background-image: url(../img/icons/close-passive.png)
+
 .filter__opt
+	padding: 5px 0 3px 11px
 	font-size: 0
-	margin-right: -20px
+	.key
+		box-shadow: none
+		margin: 0 7px 8px 0
+		width: 116px 
+		padding: 0
+		&.is-inactive
+			background-color: #ececec
+			color: #8c9aa6
+			border-color: #ececec
+	// margin-right: -20px
 .filter__opt_color
 	.key
-		width: 48px
+		width: 24px
+		height: 24px
+		border-radius: 100%
+		border-width: 2px
+		margin-right: 16px 
+		&.is-white
+			border: 2px solid #e4e4e4
+		&.is-black
+			border-color: #000
+			&:hover
+				background-color: #000
+		&.is-red
+			border-color: #e03a3a
+			&:hover
+				background-color: #e03a3a
+		&.is-yellow
+			border-color: #fab32b
+			&:hover
+				background-color: #fab32b
+		&.is-blue
+			border-color: #56b7fb
+			&:hover
+				background-color: #56b7fb
+		&.is-green
+			border-color: #3fb624
+			&:hover
+				background-color: #3fb624
+		&.is-active
+			background-image: url(../img/icons/ok-big.png) 
+			background-position: 50% 50% 
+			background-repeat: no-repeat
+			position: relative
+			&.is-white
+				background-color: #fff 
+			&.is-black
+				background-color: #000
+			&.is-red
+				background-color: #e03a3a
+			&.is-yellow
+				background-color: #fab32b
+			&.is-blue
+				background-color: #56b7fb
+			&.is-green
+				background-color: #3fb624 
