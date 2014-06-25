@@ -8,8 +8,9 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/jquery.validate.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/common.js" async></script>
 </head>
 <body>
 
@@ -17,8 +18,8 @@
 	<header class="header">
 		<div class="header__top">
 			<div class="header__left">
-				<a class="header__user" href="#">Дмитрий, ваши заказы</a>
-				<a href="#">Выход</a>
+				<a href="http://myphones.zinit1.com/ru/customer/account/create/" onclick="return false;">Регистрация</a>
+				<a href="http://myphones.zinit1.com/ru/customer/account/login/" onclick="return false;">Войти</a>
 				<div class="header__tel">(070) 277-44-55</div>
 				<a href="#">On-line поддержка</a>
 			</div>
@@ -195,7 +196,7 @@
 						<div class="input-row">
 							<label for="firstname" class="input-wrap">
 								<input type="text" class="input" id="firstname" name="firstname" required>
-								<span class="input-wrap__text">Ваше имя</span>
+								<span class="input-wrap__text">Как вас зовут (<a class="js-open-login" href="http://myphones.zinit1.com/ru/customer/account/login/">авторизация</a>)</span>
 							</label>
 						</div>
 						<div class="input-row">
@@ -204,9 +205,31 @@
 								<span class="input-wrap__text">Ваш e-mail</span>
 							</label>
 						</div>
+
+						
+						<div class="input-row">
+							<label for="country" class="input-wrap">
+								<select class="input" name="country" id="country">
+									<option selected="selected" data-code="RU" value="7">Россия</option>
+									<option data-code="UA" value="38">Украина</option>
+									<option data-code="AM" value="374">Армения</option>
+									<option data-code="BY" value="375">Беларусь</option>
+									<option data-code="GE" value="995">Грузия</option>
+									<option data-code="KZ" value="7">Казахстан</option>
+									<option data-code="LV" value="371">Латвия</option>
+									<option data-code="LT" value="370">Литва</option>
+									<option data-code="MD" value="373">Молдова</option>
+									<option data-code="TR" value="90">Турция</option>
+									<option data-code="UZ" value="998">Узбекистан</option>
+									<option data-code="EE" value="372">Эстония</option>
+								</select>
+								<span class="input-wrap__text">Страна</span>
+							</label>
+						</div>
+
 						<div class="input-row">
 							<label for="tel" class="input-wrap">
-								<input type="tel" class="input" id="tel" name="tel" required>
+								<input type="tel" class="input js-tel" placeholder="+7 ___ ___ __ __" id="tel" name="tel" required>
 								<span class="input-wrap__text">Телефон</span>
 							</label>
 						</div>
@@ -258,6 +281,34 @@
 		</ul>
 	</div>
 </footer>
+
+
+<div class="popup js-popup login-popup">
+	<div class="popup__title">Авторизация</div>
+	<form  method="post" action="" class="js-enter-form">
+		<div class="input-row">
+			<label for="email" class="input-wrap">
+				<input type="email" class="input" id="email" name="email" required>
+				<span class="input-wrap__text">Ваш e-mail</span>
+			</label>
+		</div>
+		<div class="input-row">
+			<label for="password" class="input-wrap">
+				<input type="password" class="input" id="password" name="password" required>
+				<span class="input-wrap__text">Пароль для входа</span>
+			</label>
+		</div>
+		<div class="input-row input-row_btn">
+			<div class="input-row__info">
+				<p>Введите. подалуйста, e-mail и пароль которые вы указывали при регистрации на этом сайте </p>
+				<a href="#">Забыли пароль?</a>
+			</div>
+			<input type="submit" class="btn" value="ВОЙТИ">
+		</div>
+	</form>
+	<button class="btn-close js-close"></button>
+</div>
+<div class="push"></div>
 <div class="overlay js-overlay"></div>
 
 </body>

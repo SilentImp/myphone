@@ -117,6 +117,8 @@ a:hover { color: #2e86cd; }
 .main { float: left; margin: 0 0 70px 81px; width: 703px; }
 .main .main__title { margin-top: -57px; font-size: 16px; text-transform: uppercase; color: #2e86cd; margin-bottom: 37px; }
 
+html body .login-popup.popup { position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 314px; height: 200px; margin: auto; }
+
 .select { position: relative; }
 .select.is-active .select__text { background: white; border-color: #d6e2ec; }
 .select.is-active .select__list { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; visibility: visible; }
@@ -173,6 +175,7 @@ a:hover { color: #2e86cd; }
 .input-row_btn-left .info-text { overflow: hidden; letter-spacing: -0.7px; }
 
 .btn { display: inline-block; padding: 5px 15px 4px; font-size: 12px; text-transform: uppercase; border: 2px solid #7fbded; -webkit-border-radius: 14px; -moz-border-radius: 14px; -ms-border-radius: 14px; -o-border-radius: 14px; border-radius: 14px; background: white; }
+.btn:active, .btn:hover { background-color: #80bdee; color: white; }
 
 .btn-close { position: absolute; background: url('../img/icons-s3bb899c928.png') 0 -1013px no-repeat; width: 16px; height: 16px; }
 .btn-close:hover { background-position: 0 -1190px; }
@@ -234,6 +237,7 @@ a:hover { color: #2e86cd; }
 
 .box__footer { padding: 21px 0 14px; text-align: center; border-top: 1px solid #d6e2ec; }
 .box__footer .btn { margin: 14px 0 0; color: black; }
+.box__footer .btn:hover { color: white; }
 .box__footer .btn:first-child { margin: -4px 0 3px; padding: 5px 10px 4px; }
 
 .box_fixed-width { width: 344px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; color: #768896; line-height: 1.33; }
@@ -324,11 +328,12 @@ a:hover { color: #2e86cd; }
 .popup__item .basket-item { overflow: hidden; font-size: 12px; }
 
 .filter { position: relative; display: none; padding: 10px 3px; z-index: 20000; width: 272px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 2px solid #7fbded; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; background: white; }
-.filter .btn-close { top: -6px; right: -6px; }
+.filter .btn-close { background: white; border: 2px solid #80bdee; color: #80bdee; text-align: center; width: 16px; height: 16px; line-height: 0; font-size: 0; padding: 0; margin: 0; border-radius: 100%; top: -8px; right: -8px; }
+.filter .btn-close:before { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; width: 6px; height: 2px; overflow: hidden; content: ""; display: block; background-color: #80bdee; }
 
 .filter__title { position: relative; height: 30px; margin-bottom: 2px; padding-right: 30px; padding-left: 11px; overflow: hidden; font-size: 16px; cursor: pointer; background-color: #80bdee; border-radius: 3px; color: white; font-family: Arial, sans-serif; line-height: 30px; }
+.filter__title button + .filter__title-wrap::first-letter { font-weight: bold; }
 .filter__title .filter__title-wrap { display: inline-block; }
-.filter__title .filter__title-wrap::first-letter { font-weight: bold; }
 .filter__title.ui-slider__range { background-color: white; color: black; }
 .filter__title.ui-slider__range::first-letter { font-weight: normal; }
 .filter__title .btn-clear { width: 16px; line-height: 0; font-size: 0; height: 16px; background-color: white; border-radius: 100%; position: relative; display: inline-block; vertical-align: middle; margin-right: 8px; background-image: url(../img/icons/close-active.png); background-position: 50% 50%; background-repeat: no-repeat; top: -1px; }
@@ -363,7 +368,7 @@ a:hover { color: #2e86cd; }
 
 .ui-widget { position: absolute; left: 0; right: 5px; top: 4px; height: 3px; border-radius: 2px; background: #d5e1eb; }
 
-.ui-slider__main { position: relative; margin-left: 7px; height: 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.ui-slider__main { position: relative; margin: 0 16px 0 22px; height: 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .ui-slider_width .ui-slider__main { width: 100%; }
 

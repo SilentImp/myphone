@@ -9,6 +9,37 @@ $(document).ready(function() {
     });
     var overlay = $(".js-overlay");
     var popup = $(".js-popup");
+
+    var loginPopup = $('.login-popup');
+        openLogin = $('.js-open-login');
+
+    openLogin.on('click',function(event){
+        event.preventDefault();
+        loginPopup.show();
+        overlay.show();
+    });
+
+    $.getJSON("http://www.telize.com/geoip?callback=?",
+        function(json) {
+            var select = $('#country'),
+                value = select.find('[data-code='+json.country_code+']').attr("value");
+
+            select.val(value);
+            select.trigger("change");
+        }
+    );
+
+    $(".js-tel").mask("+7 999 999 99 99");
+    $("#country").on('change',function(event){
+        var select = $(event.currentTarget),
+            value = select.val();
+
+        $(".js-tel").mask("+"+value+" 999 999 99 99");
+        $(".js-tel").attr("placeholder", "+"+value+" ___ ___ __ __")
+
+        // console.log(value);
+    });
+
     function selectList() {
         var select = $(".js-select");
         var select_list = $(".js-select-list");
@@ -175,27 +206,36 @@ $(document).ready(function() {
 
     function accordion() {
        //$(".js-accordion-list").hide();
+       
        $(".js-accordion-title").addClass("is-active");
        $(".js-hidden-list .js-accordion-list").hide();
        $(".js-hidden-list .js-accordion-title").removeClass("is-active");
-        $("body").on("click", ".js-accordion-title", function(){
+        
 
-            if ($(this).parent().hasClass("js-one-active")) {
+        $("body").on("click", ".js-accordion-title", function(event){
+
+            var title = $(event.currentTarget),
+                parent = title.parent();
+
+            if(title.hasClass('is-active')){
+                return;
+            }
+
+            if (title.parent().hasClass("js-one-active")) {
                 $(".js-accordion-title").removeClass("is-active");
                 $(".js-accordion").removeClass("is-active");
                 $(".js-accordion-list").slideUp("fast");
-                $(this).toggleClass("is-active");
-                $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
+            }else {
+                title.parent().find(".address__title").hide();
             }
-            else {
-                $(this).toggleClass("is-active");
-                $(this).parents(".js-accordion").toggleClass("is-active");
-                $(this).parent().find(".address__title").hide();   
-                
-                $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
-            }
+
+            title.addClass("is-active");
+            title.parents(".js-accordion").addClass("is-active");
+            title.parents(".js-accordion").find(".js-accordion-list").stop().slideToggle("fast");
             
         });
+
+
         $("body").on("click", ".js-show-all-accordion",function(){
             if ($(this).hasClass("is-active")) {
                 $(".js-show-all-accordion").removeClass("is-active");
@@ -306,6 +346,7 @@ $(document).ready(function() {
             var input_to = $(this).find(".js-ui-slider-to");
             var min_val = +$(this).attr("data-min");
             var max_val = +$(this).attr("data-max");
+
             slider.slider({
                 range: true,
                 min: min_val,
@@ -322,6 +363,12 @@ $(document).ready(function() {
                     //handle_1.text(ui.values[1]);
                 }
             });
+
+
+            $('.js-clear-price-filter').on('click',function(){
+                slider.slider( "values", [ min_val, max_val ]);
+            })
+
             //console.log(handle_0);
             //console.log(handle_1);
             $(this).find(".ui-slider-handle").html("<span></span>");
