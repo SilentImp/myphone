@@ -9,7 +9,7 @@ $brown: #575050
 =roman
 	font-family: Arial, sans-serif 
 =bold
-	font-family: Verdana, sans-serif 
+	font-family: Arial, sans-serif 
 	font-weight: bold
 body
 	font-size: 12px 
@@ -60,6 +60,7 @@ a
 	width: 1008px 
 .header
 	+clr
+	z-index: 25000
 	margin-bottom: 28px
 .header__top
 	margin-bottom: 26px
@@ -73,6 +74,8 @@ a
 		display: inline-block
 		vertical-align: middle
 	.header__select
+		z-index: 26000
+		position: relative
 		&:last-child
 			margin-right: -16px
 .header__user,

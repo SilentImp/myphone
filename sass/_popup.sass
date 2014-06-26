@@ -114,6 +114,8 @@
 	// color: #458fd0
 	button+.filter__title-wrap::first-letter
 		font-weight: bold
+	button.hiddenButton+.filter__title-wrap::first-letter
+		font-weight: normal
 	.filter__title-wrap
 		display: inline-block
 	&.ui-slider__range
@@ -193,6 +195,7 @@
 			position: relative
 			&.is-white
 				background-color: #fff 
+				background-image: url(../img/icons/ok-big-black.png) 
 			&.is-black
 				background-color: #000
 			&.is-red

@@ -1,3 +1,12 @@
+html body select.country-select
+	width: 50px
+	font-size: 10px
+
+html body .dd + label input,
+html body select.country-select+input
+	width: 106px 
+	font-size: 10px
+
 html body .login-popup.popup
 	position: fixed
 	top: 0
@@ -49,7 +58,7 @@ html body .login-popup.popup
 	visibility: hidden
 	top: 100%
 	left: 0
-	z-index: 1000
+	z-index: 27000
 	min-width: 100%
 	padding: 0 0 8px 
 	background: #fff 
@@ -260,6 +269,7 @@ html body .login-popup.popup
 		position: relative
 		&.is-white
 			background-color: #fff 
+			background-image: url(../img/icons/ok-black.png) 
 		&.is-black
 			background-color: #000
 		&.is-red
@@ -367,6 +377,7 @@ html body .login-popup.popup
 	.color
 		margin: 0
 .box
+	font-family: Arial, sans-serif
 	border: 1px solid #d5e1eb
 	+border-radius(8px)
 	background: #fff
@@ -386,6 +397,7 @@ html body .login-popup.popup
 	font-size: 11px
 	text-transform: uppercase
 	+bold
+	font-family: Arial, sans-serif
 	color: $brown
 .box__footer
 	padding: 21px 0 14px 

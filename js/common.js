@@ -1,5 +1,6 @@
 $(document).ready(function() {
-	$(document).click(function() {
+	
+    $(document).click(function() {
         popup.fadeOut(200);
        	overlay.fadeOut(200);
         $(".js-select").removeClass("is-active");
@@ -7,6 +8,8 @@ $(document).ready(function() {
         $(".js-open-filter").removeClass("is-active");
         $("body").removeClass("has-open-filter");
     });
+
+
     var overlay = $(".js-overlay");
     var popup = $(".js-popup");
 
@@ -19,26 +22,36 @@ $(document).ready(function() {
         overlay.show();
     });
 
-    $.getJSON("http://www.telize.com/geoip?callback=?",
-        function(json) {
-            var select = $('#country'),
-                value = select.find('[data-code='+json.country_code+']').attr("value");
 
-            select.val(value);
-            select.trigger("change");
+    var country = $("#country");
+
+
+    try {
+        if(country.length>0){
+            $.getJSON("http://www.telize.com/geoip?callback=?",
+                function(json) {
+                    var select = country,
+                        value = select.find('[data-code='+json.country_code+']').attr("value");
+
+                    select.val(value);
+                    select.trigger("change");
+                }
+            );
+            country.msDropDown();
+            $(".js-tel").mask("+7 999 999 99 99");
+            country.on('change',function(event){
+                var select = $(event.currentTarget),
+                    value = select.val();
+
+                $(".js-tel").mask("+"+value+" 999 999 99 99");
+                $(".js-tel").attr("placeholder", "+"+value+" ___ ___ __ __")
+
+                // console.log(value);
+            });
         }
-    );
-
-    $(".js-tel").mask("+7 999 999 99 99");
-    $("#country").on('change',function(event){
-        var select = $(event.currentTarget),
-            value = select.val();
-
-        $(".js-tel").mask("+"+value+" 999 999 99 99");
-        $(".js-tel").attr("placeholder", "+"+value+" ___ ___ __ __")
-
-        // console.log(value);
-    });
+    } catch(e) {
+        
+    }
 
     function selectList() {
         var select = $(".js-select");
@@ -217,20 +230,26 @@ $(document).ready(function() {
             var title = $(event.currentTarget),
                 parent = title.parent();
 
-            if(title.hasClass('is-active')){
-                return;
-            }
 
             if (title.parent().hasClass("js-one-active")) {
+
+                if(title.hasClass('is-active')){
+                    return;
+                }
+
                 $(".js-accordion-title").removeClass("is-active");
                 $(".js-accordion").removeClass("is-active");
                 $(".js-accordion-list").slideUp("fast");
+                title.addClass("is-active");
+                title.parents(".js-accordion").addClass("is-active");
             }else {
+                title.toggleClass("is-active");
+                title.parents(".js-accordion").toggleClass("is-active");
                 title.parent().find(".address__title").hide();
             }
 
-            title.addClass("is-active");
-            title.parents(".js-accordion").addClass("is-active");
+            
+            
             title.parents(".js-accordion").find(".js-accordion-list").stop().slideToggle("fast");
             
         });
@@ -261,10 +280,10 @@ $(document).ready(function() {
             $(this).children().toggleClass("is-active");
             var act = $(this).parents(".js-accordion-list").find(".js-filter-key.is-active").length;
             if (act>=1) {
-                $(this).parents(".js-accordion").find(".js-clear-filter").show();
+                $(this).parents(".js-accordion").find(".js-clear-filter").removeClass('hiddenButton').show();
             }
             else {
-                $(this).parents(".js-accordion").find(".js-clear-filter").hide();
+                $(this).parents(".js-accordion").find(".js-clear-filter").addClass('hiddenButton').hide();
             }
     		
     	}
@@ -275,7 +294,7 @@ $(document).ready(function() {
 
     $(".js-clear-filter").on("click", function(){
         $(this).parents(".js-accordion").find(".js-filter-key").removeClass("is-active");
-        $(this).hide();
+        $(this).addClass("hiddenButton").hide();
         return false;
     });
 
@@ -362,6 +381,10 @@ $(document).ready(function() {
                     //handle_0.text(ui.values[0]);
                     //handle_1.text(ui.values[1]);
                 }
+            });
+
+            slider.on('slidestop', function(){
+                $('.js-clear-price-filter').removeClass('hiddenButton').show();
             });
 
 

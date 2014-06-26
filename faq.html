@@ -6,8 +6,10 @@
 	<title>FAQ</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link rel="stylesheet" media="screen" href="css/dd.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/jquery.dd.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/jquery.validate.js"></script>
 	<script src="js/common.js" async></script>
@@ -157,9 +159,10 @@
 			</div>
 		</aside>
 		<div class="main">
-			<div class="main__title">НА ГЛАВНУЮ</div>
+			<a href="#" class="main__title">НА ГЛАВНУЮ</a>
 			<!-- <div class="title">Ваши вопросы</div> -->
-			<div class="faq js-accordion js-hidden-list">
+			
+			<div class="faq js-accordion js-hidden-list js-one-active">
 				<div class="faq__title js-accordion-title">Как быстро приходит смартфон?</div>  
 				<div class="faq__main js-accordion-list">
 					<p>После преобретения смартфона, менеджер в течении суток
@@ -169,7 +172,7 @@
 					уже в этот же день.</p>
 				</div>
 			</div>
-			<div class="faq js-accordion js-hidden-list">
+			<div class="faq js-accordion js-hidden-list js-one-active">
 				<div class="faq__title js-accordion-title">Как можно ускорить доставку смартфона?</div>
 				<div class="faq__main js-accordion-list">
 					<p>После преобретения смартфона, менеджер в течении суток
@@ -179,7 +182,7 @@
 					уже в этот же день.</p>
 				</div>
 			</div>
-			<div class="faq js-accordion js-hidden-list">
+			<div class="faq js-accordion js-hidden-list js-one-active">
 				<div class="faq__title js-accordion-title">Можно ли вернуть смартфон, если он мне не понравился?</div>
 				<div class="faq__main js-accordion-list">
 					<p>После преобретения смартфона, менеджер в течении суток
@@ -189,7 +192,8 @@
 					уже в этот же день.</p>
 				</div>
 			</div>
-			<div class="faq faq-ask js-accordion js-hidden-list">
+
+			<div class="faq faq-ask js-accordion is-active js-one-active">
 				<div class="faq__title js-accordion-title">Задайте свой вопрос</div>
 				<div class="faq__main js-accordion-list">
 					<form  method="post" action="" class="js-validate-form">
@@ -206,28 +210,22 @@
 							</label>
 						</div>
 
-						
-						<div class="input-row">
-							<label for="country" class="input-wrap">
-								<select class="input" name="country" id="country">
-									<option selected="selected" data-code="RU" value="7">Россия</option>
-									<option data-code="UA" value="38">Украина</option>
-									<option data-code="AM" value="374">Армения</option>
-									<option data-code="BY" value="375">Беларусь</option>
-									<option data-code="GE" value="995">Грузия</option>
-									<option data-code="KZ" value="7">Казахстан</option>
-									<option data-code="LV" value="371">Латвия</option>
-									<option data-code="LT" value="370">Литва</option>
-									<option data-code="MD" value="373">Молдова</option>
-									<option data-code="TR" value="90">Турция</option>
-									<option data-code="UZ" value="998">Узбекистан</option>
-									<option data-code="EE" value="372">Эстония</option>
-								</select>
-								<span class="input-wrap__text">Страна</span>
-							</label>
-						</div>
 
 						<div class="input-row">
+							<select class="input country-select" name="country" id="country">
+								<option selected="selected" data-image="img/flags/ru.png" data-code="RU" value="7">RU</option>
+								<option data-code="UA" data-image="img/flags/ua.png" value="38">UA</option>
+								<option data-code="AM" data-image="img/flags/am.png" value="374">AM</option>
+								<option data-code="BY" data-image="img/flags/by.png" value="375">BY</option>
+								<option data-code="GE" data-image="img/flags/ge.png" value="995">GE</option>
+								<option data-code="KZ" data-image="img/flags/kz.png" value="7">KZ</option>
+								<option data-code="LV" data-image="img/flags/lv.png" value="371">LV</option>
+								<option data-code="LT" data-image="img/flags/lt.png" value="370">LT</option>
+								<option data-code="MD" data-image="img/flags/md.png" value="373">MD</option>
+								<option data-code="TR" data-image="img/flags/tr.png" value="90">TR</option>
+								<option data-code="UZ" data-image="img/flags/uz.png" value="998">UZ</option>
+								<option data-code="EE" data-image="img/flags/ee.png" value="372">EE</option>
+							</select>
 							<label for="tel" class="input-wrap">
 								<input type="tel" class="input js-tel" placeholder="+7 ___ ___ __ __" id="tel" name="tel" required>
 								<span class="input-wrap__text">Телефон</span>
